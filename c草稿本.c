@@ -62,11 +62,3 @@
 
 
 
-
-#include<stdio.h>
-int main(void)
-{
-
-	printf("我也终于把这个东西给搞出来了，真是难得的机会。");
-	return 0;
-}
