@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
 //#include<stdio.h>
 //int main(void)
 //{
@@ -58,6 +60,25 @@
 //
 //	return 0;
 //}
+
+
+
+
+
+//#include<stdio.h>
+//#include<string.h>
+//int main(void)
+//{
+//	char arr1[] = "abc";
+//	char arr2[] = { 'a','b','c','\0'};
+//	int len = strlen("abc");
+//	printf("%d\n", strlen(arr1));
+//	printf("%d\n", strlen(arr2));
+//	printf("%d", len);
+//
+//	return 0;
+//}
+
 
 
 

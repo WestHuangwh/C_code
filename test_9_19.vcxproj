@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="c草稿本.c" />
     <ClCompile Include="c暂存箱.c" />
+    <ClCompile Include="text.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

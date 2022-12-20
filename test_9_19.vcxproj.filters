@@ -21,5 +21,8 @@
     <ClCompile Include="c草稿本.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="text.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
