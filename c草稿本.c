@@ -67,7 +67,7 @@
 int main(void)
 {
 
-	Git failed with a fatal error.
+	
 
 	return 0;
 }
