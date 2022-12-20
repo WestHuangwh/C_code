@@ -43,17 +43,30 @@
 
 
 
-//写一个代码，求两数的和。
+////写一个代码，求两数的和。
+//#include<stdio.h>
+//int main(void)
+//{
+//	int a = 56;
+//	int b = 44;
+//	int c = 0;
+//
+//	c = a + b;
+//
+//	printf("a,b两数之和为%d", c);
+//
+//
+//	return 0;
+//}
+
+
+
+
+
 #include<stdio.h>
 int main(void)
 {
-	int a = 56;
-	int b = 44;
-	int c = 0;
 
-	c = a + b;
-
-	printf("a,b两数之和为%d", c);
 
 
 	return 0;
