@@ -82,16 +82,8 @@
 
 
 #include<stdio.h>
-#include<string.h>
 int main(void)
 {
-	char arr[] = "abcdefgh";
-	char arr1[] = { 'a','c','c','d','e','f','g','h' };
-
-	int len = strlen("abcdefgh");
-
-	printf("%d\n", strlen("abcdefgh"));
-	printf("%d\n", len);
 
 	return 0;
 }
