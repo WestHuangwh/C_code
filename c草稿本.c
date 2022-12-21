@@ -1,4 +1,4 @@
-//#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS 1
 //#include<stdio.h>
 //int main(void)
 //{
@@ -81,9 +81,17 @@
 
 
 
-#include<stdio.h>
-int main(void)
-{
+//#include<stdio.h>
+//int main(void)
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//
+//	if (a > 10)
+//		printf("%s", "\a");
+//	return 0;
+//}
 
-	return 0;
-}
+
+
+
