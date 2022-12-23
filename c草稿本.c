@@ -182,17 +182,46 @@
 
 
 
-//数组-一组数的集合。
-//数组是用下标来访问的。
+////数组-一组数的集合。
+////数组是用下标来访问的。
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	//char ah[5] = { 'a','b','c' };//不完全初始化，剩余的部分默认为0。
+//	int i = 0;
+//	while (i < 10)
+//	{
+//		printf("%d", arr[i]);
+//		i++;
+//	}
+//
+//
+//	return 0;
+//}
+
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	//float a =9 / 2;
+//	float a = 9 % 2;
+//	printf("%f", a);
+//
+//	return 0;
+//}
+
+
+
+
 #include<stdio.h>
 int main()
 {
-	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
-	//char ah[5] = { 'a','b','c' };//不完全初始化，剩余的部分默认为0。
-	int i = 0;
-	for (i=0, i < 10, i++)
-
-
+	int a = 9;
+	int b = a << 1;
+	printf("%d", b);
 
 	return 0;
 }
