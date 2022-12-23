@@ -104,10 +104,95 @@
 
 
 
+//
+//#include<stdio.h>
+//int main(void)
+//{
+//	printf("%d\n", strlen("c:\test\328\test.c"));//八进制里没有8，\ddd的形式是八进制的形式。长度应该为14。
+//	return 0;
+//}
 
+
+
+
+
+//#include<stdio.h>
+//int main(void)
+//{
+//	int input = 0;
+//	printf("是否要努力学习编程技术(1/0)?>:");
+//
+//	scanf("%d", &input);
+//
+//	if (input == 1)
+//		printf("获得一份好的工作");
+//	else
+//		printf("回家种田去吧");
+//
+//	return 0;
+//}
+
+
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int line = 0;//给line这个变量赋值。
+//	while (line < 30000)//循环。
+//	{
+//		printf("我要努力学习，找个好工作:%d\n",line);
+//		line++;//自加
+//	}
+//	if (line == 30000)
+//	{
+//		printf("找到了一个好工作\n");
+//		
+//	}
+//	return 0;
+//}
+
+
+
+
+//#include<stdio.h>
+//Add(int x,int y)
+//{
+//	int z = 0;
+//	z = x + y;
+//	return z;
+//}
+//int main()
+//{
+//	int num1 = 0;
+//	int num2 = 0;
+//	scanf("%d,%d", &num1, &num2);
+//
+//	//int sum = num1 + num2;
+//
+//	int sum = Add(num1, num2);
+//
+//	printf("%d", sum);
+//
+//	
+//
+//	return 0;
+//}
+
+
+
+//数组-一组数的集合。
+//数组是用下标来访问的。
 #include<stdio.h>
 int main()
 {
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	//char ah[5] = { 'a','b','c' };//不完全初始化，剩余的部分默认为0。
+	int i = 0;
+	for (i=0, i < 10, i++)
+
+
 
 	return 0;
 }
