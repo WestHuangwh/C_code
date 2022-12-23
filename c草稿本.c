@@ -216,12 +216,22 @@
 
 
 
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 9;
+//	int b = a << 1;//向左移动一个二进制位。由二进制的201变为二进制的2010，所以以十进制打印出来就变成了18
+//	printf("%d", b);
+//
+//	return 0;
+//
+
+
+
 #include<stdio.h>
-int main()
+int main(void)
 {
-	int a = 9;
-	int b = a << 1;
-	printf("%d", b);
+
 
 	return 0;
 }
