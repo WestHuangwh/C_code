@@ -228,10 +228,62 @@
 
 
 
-#include<stdio.h>
-int main(void)
-{
+//#include<stdio.h>
+//int main(void)
+//{
+//	int a = 2;
+//	a += 5;
+//	printf("%d", a);
+//
+//	return 0;
+//}
 
+
+
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//	if (a != 4)
+//	{
+//
+//		printf("你很幸运，获得了本场比赛的大奖。");
+//	}
+//	
+//	return 0;
+//
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	//sizeof是一个操作符。可以计算类型和变量的大小。
+//	printf("%d\n", sizeof(a));
+//	printf("%d\n", sizeof(int));
+//
+//	printf("%d\n", sizeof a);//因为sizeof不是一个函数，所以括号可以省略。
+//
+//	return 0;
+//
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int arr[10] = { 0 };
+	printf("%d\n", sizeof(arr[0]));//计算的是第一个数组的长度。
+	printf("%d\n", sizeof(arr));//计算的是整个数组的长度。
+	int sz = sizeof(arr) / sizeof(arr[0]);//计算的是数组的个数。
+	printf("%d\n", sz);
 
 	return 0;
 }
