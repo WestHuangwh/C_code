@@ -275,15 +275,44 @@
 
 
 
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	printf("%d\n", sizeof(arr[0]));//计算的是第一个数组的长度。
+//	printf("%d\n", sizeof(arr));//计算的是整个数组的长度。
+//	int sz = sizeof(arr) / sizeof(arr[0]);//计算的是数组的个数。
+//	printf("%d\n", sz);
+//
+//	return 0;
+//}
+
+
+
+
+//#include<stdio.h>
+//int main(void)
+//{
+//	int a = 10;
+//	int b = ++a;//++在前面的时候先++，后使用。
+//	printf("%d\n", b);
+//	printf("%d\n", a);
+//
+//
+//	return 0;
+//}
+
+
+
+
 
 #include<stdio.h>
 int main()
 {
-	int arr[10] = { 0 };
-	printf("%d\n", sizeof(arr[0]));//计算的是第一个数组的长度。
-	printf("%d\n", sizeof(arr));//计算的是整个数组的长度。
-	int sz = sizeof(arr) / sizeof(arr[0]);//计算的是数组的个数。
-	printf("%d\n", sz);
-
+	int a = 10;
+	int b = a++;//后置++是先使用，再++
+	printf("%d\n", b);
+	printf("%d\n", a);
 	return 0;
 }
