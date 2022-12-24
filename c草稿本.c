@@ -305,14 +305,46 @@
 
 
 
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int b = a++;//后置++是先使用，再++
+//	printf("%d\n", b);
+//	printf("%d\n", a);
+//	return 0;
+//
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 3;
+//	int max = 0;
+//
+//	max = a > b ? a : b;
+//
+//	printf("%d\n", max);
+//	return 0;
+//}
 
 
 #include<stdio.h>
+void test()
+{
+	int a = 1;
+	a++;
+	printf("%d\n", a);
+}
 int main()
 {
-	int a = 10;
-	int b = a++;//后置++是先使用，再++
-	printf("%d\n", b);
-	printf("%d\n", a);
+	int i = 0;
+	while (i < 10)
+	{
+		test();
+			i++;
+	}
 	return 0;
 }
