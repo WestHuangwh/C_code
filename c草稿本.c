@@ -361,15 +361,37 @@
 //}
 
 
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	printf("%p\n", &a);
+//	int * pa = &a;
+//	//*说明pa是 指针变量
+//	//int说明pa指向的对象是int类型的。
+//	printf("%d\n", *pa);
+//
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	char ch = 'w';
+//	char * pc = &ch;//pc指向的对象是char类型的。
+//	printf("%c\n", *pc);
+//
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
 int main()
-{
-	int a = 10;
-	printf("%p\n", &a);
-	int * pa = &a;
-	//*说明pa是 指针变量
-	//int说明pa指向的对象是int类型的。
-	printf("%d\n", *pa);
-
+{	
+	
+	
 	return 0;
 }
