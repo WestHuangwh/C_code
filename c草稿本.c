@@ -255,7 +255,7 @@
 //	}
 //	
 //	return 0;
-//
+//}
 
 
 
@@ -270,7 +270,7 @@
 //	printf("%d\n", sizeof a);//因为sizeof不是一个函数，所以括号可以省略。
 //
 //	return 0;
-//
+//}
 
 
 
@@ -350,12 +350,26 @@
 //
 
 
+//#include<stdio.h>
+//#define max 10000
+//#define Add(x,y)  ((x)+(y))
+//int main()
+//{
+//	printf("%d\n", max);
+//	printf("%d\n", 4*Add(3, 4));
+//	return 0;
+//}
+
+
 #include<stdio.h>
-#define max 10000
-#define Add(x,y)  ((x)+(y))
 int main()
 {
-	printf("%d\n", max);
-	printf("%d\n", 4*Add(3, 4));
+	int a = 10;
+	printf("%p\n", &a);
+	int * pa = &a;
+	//*说明pa是 指针变量
+	//int说明pa指向的对象是int类型的。
+	printf("%d\n", *pa);
+
 	return 0;
 }
