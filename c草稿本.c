@@ -366,7 +366,7 @@
 //{
 //	int a = 10;
 //	printf("%p\n", &a);
-//	int * pa = &a;
+//	int * pa = &a;//&a是为了取出a的地址。
 //	//*说明pa是 指针变量
 //	//int说明pa指向的对象是int类型的。
 //	printf("%d\n", *pa);
@@ -375,12 +375,12 @@
 //}
 
 
-
+//
 //#include<stdio.h>
 //int main()
 //{
 //	char ch = 'w';
-//	char * pc = &ch;//pc指向的对象是char类型的。
+//	char * pc = &ch;//pc指向的对象是char类型的。而&ch是为了取出ch的地址。
 //	printf("%c\n", *pc);
 //
 //	return 0;
@@ -388,10 +388,69 @@
 
 
 
+//#include<stdio.h>
+//int main()
+//{	
+//	int a = 10;
+//	int* pa = &a;
+//	*pa = 20;//*是解引用操作    *pa就是通过pa里边的地址找到a
+//	printf("%d\n", a);
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	char ch = 'w';
+//	char* pc = &ch;
+//	*pc = 'h';
+//	printf("%c\n", ch);
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	printf("%d\n", sizeof(int*));
+//	printf("%d\n", sizeof(char*));
+//	printf("%d\n", sizeof(short*));
+//	printf("%d\n", sizeof(long*));
+//	printf("%d\n", sizeof(long long*));
+//	printf("%d\n", sizeof(float*));
+//	printf("%d\n", sizeof(double*));
+//
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
+//创建一个学生类型。
+struct Stu
+{
+	char name[30];//学生名字
+	int age;//学生年龄
+	double score;//学生成绩
+};
+//创建一个书的类型。
+struct Book
+{
+	char name[20];//书名
+	float price;//书的定价
+	char id[30];//书的编号
+
+};
 int main()
-{	
-	
-	
+{
+	struct Stu s = {"张三",20,85.5};//结构体的创建和初始化
+	printf("1:%s %d %lf\n", s.name, s.age, s.score);//结构体变量+.+成员变量
+	struct Stu* ps = &s;
+	printf("2:%s %d %lf\n", (*ps).name ,(*ps).age ,(*ps).score );
+	printf("3:%s %d %lf\n",ps->name ,ps->age ,ps->score );
+
+
+
 	return 0;
 }
