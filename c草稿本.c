@@ -331,20 +331,31 @@
 //}
 
 
+//#include<stdio.h>
+//void test()
+//{
+//	static int a = 1;//static修饰局部变量，改变了局部变量的生命周期。（其本质是改变了变量的存储类型。）
+//	a++;
+//	printf("%d\n", a);
+//}
+//int main()
+//{
+//	int i = 0;
+//	while (i < 10)
+//	{
+//		test();
+//			i++;
+//	}
+//	return 0;
+//
+
+
 #include<stdio.h>
-void test()
-{
-	int a = 1;
-	a++;
-	printf("%d\n", a);
-}
+#define max 10000
+#define Add(x,y)  ((x)+(y))
 int main()
 {
-	int i = 0;
-	while (i < 10)
-	{
-		test();
-			i++;
-	}
+	printf("%d\n", max);
+	printf("%d\n", 4*Add(3, 4));
 	return 0;
 }
