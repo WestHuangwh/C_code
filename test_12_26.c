@@ -26,19 +26,21 @@
 //}
 
 
-//#include<stdio.h>
-//int main()
-//{
-//	int m = 0;
-//	scanf("%d", &m);
-//	if (m % 5 == 0)
-//	{
-//		printf("YES");
-//	}
-//
-//	else
-//	{
-//		printf("NO");
-//	}
-//	return 0;
-//}
+#include<stdio.h>
+int main()
+{
+	int m = 0;
+	printf("请输入一个整数:");
+	scanf("%d", &m);
+	printf("能被5整除吗？");
+	if (m % 5 == 0)
+	{
+		printf("YES\n");
+	}
+
+	else
+	{
+		printf("NO\n");
+	}
+	return 0;
+}
