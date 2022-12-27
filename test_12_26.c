@@ -221,23 +221,51 @@
 
 
 
+//#include<stdio.h>
+//int main()
+//{
+//	char password[20] = { 0 };
+//	printf("请输入密码:>");
+//	scanf("%s", password);
+//	printf("请确认密码(Y/N):>");
+//	getchar();//清理缓存区，处理'\n'这个转义字符。
+//
+//	int ch = getchar();
+//	if (ch == 'Y')
+//	{
+//		printf("密码确认成功");
+//	}
+//	else
+//	{
+//		printf("密码确认失败");
+//	}
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int ch = 0;
+//	while ((ch = getchar())!= EOF)
+//	{
+//		if (ch < '0' || ch>'9')
+//			continue;
+//		putchar(ch);
+//	}
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
 int main()
 {
-	char password[20] = { 0 };
-	printf("请输入密码:>");
-	scanf("%s", password);
-	printf("请确认密码(Y/N)\n");
-	getchar();//清理缓存区，处理\n这个转义字符。
-
-	int ch = getchar();
-	if (ch == 'Y')
+	int i = 1;
+	for (i = 1; i <= 10; i++)
 	{
-		printf("密码确认成功");
-	}
-	else
-	{
-		printf("密码确认失败");
+		printf("%d ", i);
 	}
 	return 0;
 }
