@@ -165,16 +165,79 @@
 
 
 
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 1;
+//	while (i <= 10)
+//	{
+//		if (5 == i)
+//			break;//在while循环里，break用于永久的终止循环。
+//		printf("%d ", i);
+//		i++;
+//	}
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 1;
+//	while (i <= 10)
+//	{
+//		if (5 == i)
+//			continue;//continue是为了跳过它后面的内容。
+//
+//		printf("%d ", i);
+//		i++;
+//	}
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//int main()
+//{	
+//	int ch = getchar();
+//	putchar(ch);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int ch = 0;
+//	while ((ch = getchar())!= EOF)
+//	{
+//		putchar(ch);
+//
+//	}
+//	return 0;
+//}
+
+
+
+
+
 #include<stdio.h>
 int main()
 {
-	int i = 1;
-	while (i <= 10)
+	char password[20] = { 0 };
+	printf("请输入密码:>");
+	scanf("%s", password);
+	printf("请确认密码(Y/N)\n");
+	getchar();//清理缓存区，处理\n这个转义字符。
+
+	int ch = getchar();
+	if (ch == 'Y')
 	{
-		if (5 == i)
-			break;//在while循环里，break用于永久的终止循环。
-		printf("%d ", i);
-		i++;
+		printf("密码确认成功");
+	}
+	else
+	{
+		printf("密码确认失败");
 	}
 	return 0;
 }
