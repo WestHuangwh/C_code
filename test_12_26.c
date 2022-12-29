@@ -277,19 +277,6 @@
 //#include<stdio.h>
 //int main()
 //{
-//	int i = 1;
-//	for (i = 1; i <= 10; i++)
-//	{
-//		printf("%d ", i);
-//	}
-//	return 0;
-//}
-
-
-
-//#include<stdio.h>
-//int main()
-//{
 //	int i = 0;
 //	for (i = 1; i <= 10; i++)
 //	{
@@ -466,41 +453,68 @@
 //}
 
 
+////二分查找一个数字。
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[] = {1,2,3,4,5,6,7,8,9,10 };
+//	int k = 7;//要找的那个数。
+//	int sz = sizeof(arr) /sizeof(arr[0]);//求数组的个数。
+//	int left = 0;//第一个数的下标。
+//	int right = sz - 1;//最后一个数的下标
+//
+//	while (left <= right)
+//	{
+//		int mid = (right + left) / 2;
+//
+//		if (arr[mid] < k)//如果要找的数在下标为mid的数的右边。
+//		{
+//
+//			left = mid + 1;
+//		}
+//		else if (arr[mid] > k)//如果要找的数在下标为mid的数的左边。
+//		{
+//			right = mid - 1;
+//		}
+//		else
+//		{
+//			printf("找到了，下标为：%d\n", mid);
+//			break;//跳出循环
+//		}
+//		
+//	}
+//	if (left > right)
+//	{
+//		printf("没有找到\n");
+//
+//	}
+//	return 0;
+//}
+
+
+
 
 #include<stdio.h>
+#include<string.h>
+#include<Windows.h>
 int main()
 {
-	int arr[] = {1,2,3,4,5,6,7,8,9,10 };
-	int k = 7;
-	int sz = sizeof(arr) / sizeof(arr[0]);
+	char arr1[] = "welcome to bit!!!!!!";
+	char arr2[] = "####################";
 	int left = 0;
-	int right = sz - 1;
-	int mid = 0;
-
+	int right = strlen(arr1) - 1;
 	while (left <= right)
 	{
-		 mid = (right + left) / 2;
+		arr2[left] = arr1[left];
+		arr2[right] = arr1[right];
 
-		if (arr[mid] < k)
-		{
+		printf("%s\n", arr2);
+		Sleep(1000);//1000毫秒，睡眠一秒。
+		system("cls");//清空屏幕。
 
-			left = mid + 1;
-		}
-		else if (arr[mid] > k)
-		{
-			right = mid - 1;
-		}
-		else
-		{
-			printf("找到了，下标为：%d\n", mid);
-			break;
-		}
-		
+		left++;
+		right--;
 	}
-	if (left > right)
-	{
-		printf("没有找到\n");
-
-	}
+	printf("%s\n", arr2);//也可以把清空屏幕的指令放在打印语句的前面实现同样的效果。
 	return 0;
 }
