@@ -318,13 +318,181 @@
 
 
 
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int k = 0;
+//	for (i = 0, k = 0; k == 0; i++, k++)
+//		k++;
+//
+//	return 0;
+//}
+
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	do
+//	{
+//		printf("%d ", i);
+//		i++;
+//	} while (i <= 10);//至少会循环一次。
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int n = 0;
+//	int num = 1;
+//	scanf("%d", &n);
+//	for (i=1;i<=n; i++)
+//	{
+//		num =num* i;
+//
+//	}
+//	printf("%d\n", num);
+//
+//	return 0;
+//}
+
+
+
+
+//#include<stdio.h>
+//int Add(int n)
+//{
+//	int i = 0;
+//	int num = 1;
+//	for (i = 1; i <= n; i++)
+//	{
+//		num = num * i;
+//	}
+//	return num;
+//
+//}
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//	int b = Add(a);
+//	printf("%d", b);
+//
+//	return 0;
+//}
+
+
+//求1！+2！+....+10!的和。
+//#include<stdio.h>
+//int Add(int n)//定义了一个求阶层的函数。
+//{
+//	int i = 0;
+//	int num = 1;
+//	for (i = 1; i <= n; i++)
+//	{
+//		num = num * i;
+//	}
+//	return num;
+//
+//}
+//int main()
+//{
+//	int a = 0;
+//	int b = 1;
+//	int g = 0;
+//	for (a = 1; a <=10; a++)
+//	{
+//		 b = Add(a);
+//		g =g + b;
+//
+//	}
+//	printf("%d", g);
+//
+//	return 0;
+//}
+
+
+
+////求1！+2！+....+10!的和。
+//#include<stdio.h>
+//int Add(int n)//定义了一个求阶层的函数。
+//{
+//	int i = 0;
+//	int num = 1;
+//	int max = 0;
+//	for (i = 1; i <= n; i++)
+//	{
+//		num = num * i;
+//		max = max + num;
+//	}
+//	return max;
+//
+//}
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//	int b = Add(a);
+//	printf("%d", b);
+//
+//	return 0;
+//}
+
+
+
+
+////计算1！+2！+3！+...+10！的和。
+//#include<stdio.h>
+//int main()
+//{
+//	int n = 0;
+//	int i = 0; 
+//	int ret = 1;
+//	int sum = 0;
+//	for (n = 1; n <= 10; n++)
+//	{
+//		ret*= n;//原理；3！=2！*3
+//		sum += ret;
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
 int main()
 {
-	int i = 0;
-	int k = 0;
-	for (i = 0, k = 0; k == 0; i++, k++)
-		k++;
+	int arr[] = { 0,1,2,3,4,5,6,7,8,9,10 };
+	int k = 7;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int left = 0;
+	int right = sz - 1;
+	int mid = 0;
+	if (arr[mid] < k)
+	{
+		int mid = (right + left) / 2;
 
+		left = mid + 1;
+	}
+	else if (arr[mid] > k)
+	{
+		right = mid - 1;
+	}
+	else if(arr[mid]=k)
+	{
+		printf("找到了，下标为：%d\n", mid);
+	}
+	else
+	{
+		printf("没有找到");
+	}
 	return 0;
 }
