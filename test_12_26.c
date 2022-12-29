@@ -494,27 +494,58 @@
 
 
 
+//#include<stdio.h>
+//#include<string.h>
+//#include<Windows.h>
+//int main()
+//{
+//	char arr1[] = "welcome to bit!!!!!!";
+//	char arr2[] = "####################";
+//	int left = 0;
+//	int right = strlen(arr1) - 1;
+//	while (left <= right)
+//	{
+//		arr2[left] = arr1[left];
+//		arr2[right] = arr1[right];
+//
+//		printf("%s\n", arr2);
+//		Sleep(1000);//1000毫秒，睡眠一秒。
+//		system("cls");//清空屏幕。
+//
+//		left++;
+//		right--;
+//	}
+//	printf("%s\n", arr2);//也可以把清空屏幕的指令放在打印语句的前面实现同样的效果。
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
 #include<string.h>
-#include<Windows.h>
 int main()
 {
-	char arr1[] = "welcome to bit!!!!!!";
-	char arr2[] = "####################";
-	int left = 0;
-	int right = strlen(arr1) - 1;
-	while (left <= right)
+	int i = 0;
+	//假设正确的密码是"123456"
+	char password[20] = {0};
+	for (i = 0; i <= 3; i++)
 	{
-		arr2[left] = arr1[left];
-		arr2[right] = arr1[right];
-
-		printf("%s\n", arr2);
-		Sleep(1000);//1000毫秒，睡眠一秒。
-		system("cls");//清空屏幕。
-
-		left++;
-		right--;
+		printf("请输入密码>:");
+		scanf("%s", password);//字符串就是地址，不需要加取地址符&
+		if (strcmp(password ,"123456")==0)//strcmp函数用于字符串的比较。两个字符串的比较不能用==直接比较,字符串相等则strcmp返回0
+		{
+			printf("登陆成功\n");
+			break;
+		}
+		else
+		{
+			int g = 0;
+			printf("密码输入错误\n");
+			g = 3 - i;
+			printf("你还剩下%d次确定密码的机会\n",g);
+		
+		}
+		
 	}
-	printf("%s\n", arr2);//也可以把清空屏幕的指令放在打印语句的前面实现同样的效果。
 	return 0;
 }
