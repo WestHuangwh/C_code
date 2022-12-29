@@ -125,9 +125,16 @@
 //	scanf("%d", &input);
 //
 //	if (input == 1)
+//	{
 //		printf("获得一份好的工作");
+//
+//	}
+// 
 //	else
+//	{
 //		printf("回家种田去吧");
+//
+//	}
 //
 //	return 0;
 //}
@@ -157,7 +164,7 @@
 
 
 //#include<stdio.h>
-//Add(int x,int y)
+// int Add(int x,int y)
 //{
 //	int z = 0;
 //	z = x + y;
@@ -192,7 +199,7 @@
 //	int i = 0;
 //	while (i < 10)
 //	{
-//		printf("%d", arr[i]);
+//		printf("%d ", arr[i]);
 //		i++;
 //	}
 //
@@ -242,7 +249,7 @@
 
 
 
-
+//
 //#include<stdio.h>
 //int main()
 //{
@@ -330,7 +337,7 @@
 //	return 0;
 //}
 
-
+//
 //#include<stdio.h>
 //void test()
 //{
@@ -344,12 +351,15 @@
 //	while (i < 10)
 //	{
 //		test();
-//			i++;
+//		i++;
 //	}
 //	return 0;
-//
-
-
+//}
+ 
+ 
+ 
+ 
+ 
 //#include<stdio.h>
 //#define max 10000
 //#define Add(x,y)  ((x)+(y))
