@@ -391,7 +391,7 @@
 
 //求1！+2！+....+10!的和。
 //#include<stdio.h>
-//int Add(int n)//定义了一个求阶层的函数。
+//int Add(int n)//定义了一个求阶乘的函数。
 //{
 //	int i = 0;
 //	int num = 1;
@@ -422,7 +422,7 @@
 
 ////求1！+2！+....+10!的和。
 //#include<stdio.h>
-//int Add(int n)//定义了一个求阶层的函数。
+//int Add(int n)//定义了一个求阶乘的函数。
 //{
 //	int i = 0;
 //	int num = 1;
@@ -470,29 +470,37 @@
 #include<stdio.h>
 int main()
 {
-	int arr[] = { 0,1,2,3,4,5,6,7,8,9,10 };
+	int arr[] = {1,2,3,4,5,6,7,8,9,10 };
 	int k = 7;
 	int sz = sizeof(arr) / sizeof(arr[0]);
 	int left = 0;
 	int right = sz - 1;
 	int mid = 0;
-	if (arr[mid] < k)
-	{
-		int mid = (right + left) / 2;
 
-		left = mid + 1;
-	}
-	else if (arr[mid] > k)
+	while (left <= right)
 	{
-		right = mid - 1;
+		 mid = (right + left) / 2;
+
+		if (arr[mid] < k)
+		{
+
+			left = mid + 1;
+		}
+		else if (arr[mid] > k)
+		{
+			right = mid - 1;
+		}
+		else
+		{
+			printf("找到了，下标为：%d\n", mid);
+			break;
+		}
+		
 	}
-	else if(arr[mid]=k)
+	if (left > right)
 	{
-		printf("找到了，下标为：%d\n", mid);
-	}
-	else
-	{
-		printf("没有找到");
+		printf("没有找到\n");
+
 	}
 	return 0;
 }
