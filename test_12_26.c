@@ -521,31 +521,100 @@
 
 
 
-#include<stdio.h>
-#include<string.h>
-int main()
-{
-	int i = 0;
-	//假设正确的密码是"123456"
-	char password[20] = {0};
-	for (i = 0; i <= 3; i++)
-	{
-		printf("请输入密码>:");
-		scanf("%s", password);//字符串就是地址，不需要加取地址符&
-		if (strcmp(password ,"123456")==0)//strcmp函数用于字符串的比较。两个字符串的比较不能用==直接比较,字符串相等则strcmp返回0
-		{
-			printf("登陆成功\n");
-			break;
-		}
-		else
-		{
-			int g = 0;
-			printf("密码输入错误\n");
-			g = 3 - i;
-			printf("你还剩下%d次确定密码的机会\n",g);
-		
-		}
-		
-	}
-	return 0;
-}
+//#include<stdio.h>
+//#include<string.h>
+//int main()
+//{
+//	int i = 0;
+//	//假设正确的密码是"123456"
+//	char password[20] = {0};
+//	for (i = 0; i <= 3; i++)
+//	{
+//		printf("请输入密码>:");
+//		scanf("%s", password);//字符串就是地址，不需要加取地址符&
+//		if (strcmp(password ,"123456")==0)//strcmp函数用于字符串的比较。两个字符串的比较不能用==直接比较,字符串相等则strcmp返回0
+//		{
+//			printf("登陆成功\n");
+//			break;
+//		}
+//		else
+//		{
+//			int g = 0;
+//			printf("密码输入错误\n");
+//			g = 3 - i;
+//			printf("你还剩下%d次确定密码的机会\n",g);
+//		
+//		}
+//		
+//	}
+//	return 0;
+//}
+
+
+
+
+////猜数字游戏,范围在1-100之间
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<time.h>
+//void menu()
+//{
+//	printf("*************************************\n");
+//	printf("******     1.play     ***************\n");
+//	printf("******     0.exit     ***************\n");
+//	printf("*************************************\n");
+//}
+//void game()//猜数字游戏的实现
+//{
+//	//1.生成随机数
+//	int ret = rand()%100+1;//模100的余数是0-99，然后+1就是1-100
+//	//printf("%d\n", ret);
+//
+//	//2.猜数字
+//	int gues = 0;
+//
+//	while (1)
+//	{
+//		printf("请猜数字:>");
+//		scanf("%d", &gues);
+//		if (gues < ret)
+//		{
+//			printf("猜小了\n");
+//		}
+//		else if(gues>ret)
+//		{
+//			printf("猜大了\n");
+//		}
+//		else
+//		{
+//			printf("恭喜您，猜对了");
+//			break;
+//		}
+//	}
+//}
+//int main()
+//{
+//	int input = 0;
+//	srand((unsigned int)time(NULL));
+//	 
+//	do
+//	{
+//		menu();//打印菜单
+//		printf("请选择:>");
+//		scanf("%d", &input);
+//		switch(input)
+//		{
+//			case 1:
+//				game();
+//				break;
+//			case 0:
+//				printf("退出游戏\n");
+//				break;
+//			default:
+//				printf("输入错误，请重新输入\n");
+//		}
+//
+//	} while (input);
+//
+//	return 0;
+//}
