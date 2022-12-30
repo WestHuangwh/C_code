@@ -622,37 +622,54 @@
 
 
 
-#include<stdio.h>
-int main()
-{
-	int a = 0;
-	int b = 0;
-	int c = 0;
-	//输出三个数
-	scanf("%d%d%d", &a, &b, &c);
-	//比较三个数的大小
-	if (a < b)
-	{
-		int tmp = a;
-		a = b;
-		b = tmp;
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int c = 0;
+//	//输出三个数
+//	scanf("%d%d%d", &a, &b, &c);
+//	//比较三个数的大小,并从大到小排列
+//	if (a < b)
+//	{
+//		int tmp = a;
+//		a = b;
+//		b = tmp;
+//
+//	}
+//	if (a < c)
+//	{
+//		int tmp = a;
+//		a = c;
+//		c = tmp;
+//	}
+//
+//	
+//	if (b < c)
+//	{
+//		int tmp = b;
+//		b = c;
+//		c = tmp;
+//	}
+//	printf("%d %d %d", a, b, c);
+//
+//	return 0;
+//}
 
-	}
-	if (a < c)
-	{
-		int tmp = a;
-		a = c;
-		c = tmp;
-	}
 
-	
-	if (b < c)
-	{
-		int tmp = b;
-		b = c;
-		c = tmp;
-	}
-	printf("%d %d %d", a, b, c);
 
-	return 0;
-}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		if (i % 3 == 0)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	return 0;
+//}
