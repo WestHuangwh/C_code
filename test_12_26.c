@@ -57,7 +57,7 @@
 //		printf("您已经成年了");
 //
 //	}
-//	if (age < 18)
+//	else if (age < 18)
 //	{
 //		printf("还未成年\n");
 //		printf("不能谈恋爱\n");
@@ -618,3 +618,41 @@
 //
 //	return 0;
 //}
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	//输出三个数
+	scanf("%d%d%d", &a, &b, &c);
+	//比较三个数的大小
+	if (a < b)
+	{
+		int tmp = a;
+		a = b;
+		b = tmp;
+
+	}
+	if (a < c)
+	{
+		int tmp = a;
+		a = c;
+		c = tmp;
+	}
+
+	
+	if (b < c)
+	{
+		int tmp = b;
+		b = c;
+		c = tmp;
+	}
+	printf("%d %d %d", a, b, c);
+
+	return 0;
+}
