@@ -743,30 +743,57 @@
 
 
 
-//打印100-200之间的素数。素数又叫质数，是只能被1和它本身整除的数。
+////打印100-200之间的素数。素数又叫质数，是只能被1和它本身整除的数。
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	int s = 0;
+//	int count = 0;
+//	for (s = 100; s <= 200; s++)
+//	{
+//		int j = 0;
+//		for (j = 2; j <s; j++)
+//		{
+//			if (s % j == 0)
+//			{
+//				break;
+//			}
+//		}
+//		if (s == j)
+//		{
+//			printf("%d ", s);
+//			count++;
+//		}
+//	}
+//	printf("\n质数的个数为：%d", count);
+//
+//	return 0;
+//}
+
+
+//60秒关机程序
 #include<stdio.h>
-#include<math.h>
+#include<stdlib.h>//system用到的头文件
+#include<string.h>//strcmp用到的头文件
 int main()
 {
-	int s = 0;
-	int count = 0;
-	for (s = 100; s <= 200; s++)
+	char input[20] = {0};
+	system("shutdown -s -t 60");//关机的命令，关机时间为60秒。
+
+again:
+	printf("请注意你的电脑即将在一分钟后关机，如果输入：我是猪，就取消关机\n");
+	scanf("%s", input);//字符串本事就是地址，不需要用取地址符&
+
+	if (strcmp(input, "我是猪") == 0)//两个字符串比较不能用 == 这个符号。要用strcmp这个函数进行比较
 	{
-		int j = 0;
-		for (j = 2; j <s; j++)
-		{
-			if (s % j == 0)
-			{
-				break;
-			}
-		}
-		if (s == j)
-		{
-			printf("%d ", s);
-			count++;
-		}
+		printf("您的电脑已取消关机\n");
+		system("shutdown -a");
 	}
-	printf("\n质数的个数为：%d", count);
+	else
+	{
+		goto again;//goto语句返回again;
+	}
 
 	return 0;
 }
