@@ -676,22 +676,97 @@
 
 
 
+
+////算两个数的最大公约数。
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int c = 1;
+//	scanf("%d %d", &a, &b);
+//	int min = a < b ? a : b;
+//	int* pa = &min;
+//	for(c=*pa;c>1;c--)
+//	{
+//		if (a % c == 0 && b % c == 0)
+//		{
+//			printf("%d ", c);
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+////用辗转相除法求两个数的最大公约数。
+//#include<stdio.h>
+//int main()
+//{
+//	int m = 0;
+//	int n = 0;
+//	scanf("%d %d", &m, &n);
+//	int max = 0;
+//	while (t = m % n)//当t = m % n,t的值不等于零的时候while循环为正确。
+//	{
+//		m = n;
+//		n = max;
+//		
+//	}
+//	printf("最大公约数为：%d", n);
+//	return 0;
+//}
+
+
+
+
+////判断1000-2000之间的瑞年有哪些。
+//#include<stdio.h>
+//int main()
+//{
+//	int y = 0;
+//	for (y = 1000; y <= 2000; y++)
+//	{
+//		if (y % 4 == 0 && y % 100 != 0)
+//		{
+//			printf("%d ", y);
+//		}
+//		if (y % 400 == 0)
+//		{
+//			printf("%d ", y);
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+
+//打印100-200之间的素数。素数又叫质数，是只能被1和它本身整除的数。
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-	int a = 0;
-	int b = 0;
-	int c = 1;
-	scanf("%d %d", &a, &b);
-	int min = a < b ? a : b;
-	int* pa = &min;
-	for(c=*pa;c>1;c--)
+	int s = 0;
+	int count = 0;
+	for (s = 100; s <= 200; s++)
 	{
-		if (a % c == 0 && b % c == 0)
+		int j = 0;
+		for (j = 2; j <s; j++)
 		{
-			printf("%d ", c);
-			break;
+			if (s % j == 0)
+			{
+				break;
+			}
+		}
+		if (s == j)
+		{
+			printf("%d ", s);
+			count++;
 		}
 	}
+	printf("\n质数的个数为：%d", count);
+
 	return 0;
 }
