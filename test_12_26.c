@@ -673,3 +673,25 @@
 //	}
 //	return 0;
 //}
+
+
+
+#include<stdio.h>
+int main()
+{
+	int a = 0;
+	int b = 0;
+	int c = 1;
+	scanf("%d %d", &a, &b);
+	int min = a < b ? a : b;
+	int* pa = &min;
+	for(c=*pa;c>1;c--)
+	{
+		if (a % c == 0 && b % c == 0)
+		{
+			printf("%d ", c);
+			break;
+		}
+	}
+	return 0;
+}
