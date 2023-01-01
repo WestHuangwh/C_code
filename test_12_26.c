@@ -772,31 +772,31 @@
 //}
 
 
-//60秒关机程序
-#include<stdio.h>
-#include<stdlib.h>//system用到的头文件
-#include<string.h>//strcmp用到的头文件
-int main()
-{
-	char input[20] = {0};
-	system("shutdown -s -t 60");//关机的命令，关机时间为60秒。
-
-again:
-	printf("请注意你的电脑即将在一分钟后关机，如果输入：我是猪，就取消关机\n");
-	scanf("%s", input);//字符串本事就是地址，不需要用取地址符&
-
-	if (strcmp(input, "我是猪") == 0)//两个字符串比较不能用 == 这个符号。要用strcmp这个函数进行比较
-	{
-		printf("您的电脑已取消关机\n");
-		system("shutdown -a");
-	}
-	else
-	{
-		goto again;//goto语句返回again;
-	}
-
-	return 0;
-}
+////60秒关机程序
+//#include<stdio.h>
+//#include<stdlib.h>//system用到的头文件
+//#include<string.h>//strcmp用到的头文件
+//int main()
+//{
+//	char input[20] = {0};
+//	system("shutdown -s -t 60");//关机的命令，关机时间为60秒。
+//
+//again:
+//	printf("请注意你的电脑即将在一分钟后关机，如果输入：我是猪，就取消关机\n");
+//	scanf("%s", input);//字符串本事就是地址，不需要用取地址符&
+//
+//	if (strcmp(input, "我是猪") == 0)//两个字符串比较不能用 == 这个符号。要用strcmp这个函数进行比较
+//	{
+//		printf("您的电脑已取消关机\n");
+//		system("shutdown -a");
+//	}
+//	else
+//	{
+//		goto again;//goto语句返回again;
+//	}
+//
+//	return 0;
+//}
 
 
 
@@ -830,44 +830,7 @@ again:
 
 
 
-//#include<stdio.h>
-//int get_max(int x, int y)
-//{
-//	return x > y ? x : y;
-//}
-//int main()
-//{
-//	int a = 0;
-//	int b = 0;
-//	scanf("%d%d", &a, &b);
-//	int max = get_max(a, b);
-//	printf("max = %d", max);
-//
-//
-//	return 0;
-//}
 
 
 
-//
-////写一个函数，交换两个变量的值。
-//#include<stdio.h>
-//void Add(int* pa, int* pb)//void表示函数没有返回值。
-//{
-//	int t = 0;
-//	t = *pa;
-//	*pa = *pb;
-//	*pb = t;
-//}
-//int main()
-//{
-//	int a = 10;
-//	int b = 20;
-//	printf("交换前：a = %d a = %d\n", a, b);
-//
-//	Add(&a, &b);
-//
-//	printf("交换后：a = %d b = %d", a, b);
-//
-//	return 0;
-//}
+
