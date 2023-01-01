@@ -797,3 +797,77 @@ again:
 
 	return 0;
 }
+
+
+
+//#include<stdio.h>
+//#include<string.h>
+//int main()
+//{
+//	char arr1[20] = { 0 };
+//	char arr2[] = "hello,bit";
+//	strcpy(arr1, arr2);//这个函数把arr2里的字符串置换到arr1里
+//	printf("%s", arr1);
+//
+//
+//	return 0;
+//}
+
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	char arr[] = "hello,bit";
+//	memset(arr, 'x', 5);//memset函数把arr里面的字符串前五个字符改为x
+//	printf("%s", arr);
+//
+//	return 0;
+//}
+
+
+
+
+
+//#include<stdio.h>
+//int get_max(int x, int y)
+//{
+//	return x > y ? x : y;
+//}
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d%d", &a, &b);
+//	int max = get_max(a, b);
+//	printf("max = %d", max);
+//
+//
+//	return 0;
+//}
+
+
+
+//
+////写一个函数，交换两个变量的值。
+//#include<stdio.h>
+//void Add(int* pa, int* pb)//void表示函数没有返回值。
+//{
+//	int t = 0;
+//	t = *pa;
+//	*pa = *pb;
+//	*pb = t;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	printf("交换前：a = %d a = %d\n", a, b);
+//
+//	Add(&a, &b);
+//
+//	printf("交换后：a = %d b = %d", a, b);
+//
+//	return 0;
+//}
