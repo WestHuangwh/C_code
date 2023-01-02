@@ -126,3 +126,40 @@
 
 
 
+//#include<stdio.h>
+//void print(unsigned int n)
+//{
+//	if (n > 9)
+//	{
+//		print(n / 10);
+//	}
+//	printf("%d ",n%10);
+//}
+//int main()
+//{
+//	unsigned int num = 0;
+//	scanf("%d", &num);
+//	print(num);
+//	
+//	return 0;
+//}
+
+
+
+
+
+#include<stdio.h>
+int test(int n)
+{
+	if (n < 100)
+	{
+		test(n + 1);
+	}
+	printf("%d ", n);
+}
+int main()
+{
+	test(1);
+
+	return 0;
+}
