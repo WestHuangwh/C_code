@@ -237,26 +237,197 @@
 //}
 
 
+
+
+////利用迭代求斐波那契数。
+//#include<stdio.h>
+//int Fib(int n)
+//{
+//	int a = 1;
+//	int b = 1;
+//	int c = 1;
+//	while (n > 2)
+//	{
+//		c = a + b;
+//		a = b;
+//		b = c;
+//		n--;
+//	}
+//	return c;
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	printf("%d\n", Fib(n));
+//
+//	return 0;
+//}
+
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int count = 0;
+//	int i = 0;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		if (i % 10 == 9)
+//		{
+//			printf("%d ", i);
+//
+//			count++;
+//		}
+//		if (i / 10 == 9)
+//		{
+//			printf("%d ", i);
+//
+//			count++;
+//		}
+//	}
+//	printf("%d\n", count);
+//	return 0;
+//}
+
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int max = 0;
+//	int i = 0;
+//	char arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (arr[i] > max)
+//		{
+//			max = arr[i];
+//		}
+//
+//	}
+//	printf("%d\n", max);
+//	return 0;
+//}
+
+
+
+////打印九九乘法表。
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (i = 1; i <= 9; i++)
+//	{
+//		for (j = 1; j <= i; j++)
+//		{
+//			if (j < i)
+//			{
+//				printf("%dx%d=%-2d    ", j, i, j * i);//-2d是为了排列整齐。有空格补充空位。
+//
+//			}
+//			if (j == i)
+//			{
+//				printf("%dx%d=%-2d\n", j, i, j * i);
+//
+//			}
+//		}
+//	}
+//
+//	return 0;
+//}
+
+
+
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<time.h>
+//void nunm()
+//{
+//	printf("****************************************\n");
+//	printf("***********1.开始游戏       ************\n");
+//	printf("***********0.退出游戏       ************\n");
+//	printf("****************************************\n");
+//	
+//}
+//void game()
+//{
+//	int ret = rand() % 100 + 1;
+//	//printf("%d",red);
+//	int guts = 0;
+//	while (1)
+//	{
+//		printf("请猜数字:> ");
+//		scanf("%d", &guts);
+//		if (guts < ret)
+//		{
+//			printf("猜小了\n");
+//		}
+//		else if (guts > ret)
+//		{
+//			printf("猜大了\n");
+//		}
+//		else
+//		{
+//			printf("恭喜你猜对了\n");
+//			break;
+//		}
+//	}
+//}
+//int main()
+//{
+//	int a = 0;
+//	srand((unsigned int)time(NULL));
+//	do
+//	{
+//		nunm();
+//		printf("请选择:> ");
+//		scanf("%d", &a);
+//
+//		switch (a)
+//		{
+//		case 1:
+//			printf("猜数字游戏开始\n");
+//			game();
+//			break;
+//		case 0:
+//			printf("退出游戏\n");
+//			break;
+//		default:
+//			printf("输入错误，请重新输入\n");
+//		}
+//
+//	} while (a);
+//	return 0;
+//
+
+
+
+
+//定义一个函数打印九九乘法表。
 #include<stdio.h>
-int Fib(int n)
+int Add(int n)
 {
-	int a = 1;
-	int b = 1;
-	int c = 1;
-	while (n > 2)
+	int x = 0;
+	for (x = 1; x <= n; x++)
 	{
-		c = a + b;
-		a = b;
-		b = c;
-		n--;
+		int j = 0;
+		for (j = 1; j <= x; j++)
+		{
+			printf("%dx%d=%-2d    ", j, x, j * x);
+		}
+		printf("\n");
 	}
-	return c;
 }
 int main()
 {
 	int n = 0;
 	scanf("%d", &n);
-	printf("%d\n", Fib(n));
+	Add(n);
 
 	return 0;
 }
