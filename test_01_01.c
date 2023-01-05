@@ -433,25 +433,45 @@
 //}
 
 
+//用递归求任意一个非负整数的每一位加起来的和。
+//#include<stdio.h>
+//int Digitsum(int n)
+//{
+//	if (n > 9)
+//	{
+//		return  Digitsum(n / 10) + n % 10;
+//	}
+//	else
+//	{
+//		return n;
+//	}
+//
+//}
+//
+//int main()
+//{
+//	int num = 1729;
+//	int sum = Digitsum(num);
+//	printf("%d", sum);
+//	return 0;
+//}
+
+
 
 #include<stdio.h>
-int Digitsum(int num)
-{
-	if (num % 10 !=9)
-	{
-		return num % 10 + Digitsum (num / 10);
-	}
-	else
-	{
-		return num;
-	}
-
-}
-
 int main()
 {
-	int num = 17;
-	int n = Digitsum(&num);
-	printf("%d", n);
+	int n = 0;
+	int i = 0;
+	int num = 1;
+	scanf("%d", &n);
+
+	int k = 0;
+	scanf("%d", &k);
+	for (i = 1; i <= k; i++)
+	{
+		num = num * n;
+	}
+	printf("%d\n", num);
 	return 0;
 }
