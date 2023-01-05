@@ -408,26 +408,50 @@
 
 
 
-//定义一个函数打印九九乘法表。
+////定义一个函数打印九九乘法表。
+//#include<stdio.h>
+//int Add(int n)
+//{
+//	int x = 0;
+//	for (x = 1; x <= n; x++)
+//	{
+//		int j = 0;
+//		for (j = 1; j <= x; j++)
+//		{
+//			printf("%dx%d=%-2d    ", j, x, j * x);
+//		}
+//		printf("\n");
+//	}
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	Add(n);
+//
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
-int Add(int n)
+int Digitsum(int num)
 {
-	int x = 0;
-	for (x = 1; x <= n; x++)
+	if (num % 10 !=9)
 	{
-		int j = 0;
-		for (j = 1; j <= x; j++)
-		{
-			printf("%dx%d=%-2d    ", j, x, j * x);
-		}
-		printf("\n");
+		return num % 10 + Digitsum (num / 10);
 	}
+	else
+	{
+		return num;
+	}
+
 }
+
 int main()
 {
-	int n = 0;
-	scanf("%d", &n);
-	Add(n);
-
+	int num = 17;
+	int n = Digitsum(&num);
+	printf("%d", n);
 	return 0;
 }
