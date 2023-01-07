@@ -457,30 +457,46 @@
 //}
 
 
+////用递归求n的k次方。
+//#include<stdio.h>
+//double Pow(int n, int k)
+//{
+//	if (k == 0)
+//	{
+//		return 1.0;
+//	}
+//	else if (k > 0)
+//	{
+//		return n * Pow(n, k - 1);
+//
+//	}
+//	else
+//	{
+//		return 1.0 / Pow(n, -k);
+//	}
+//}
+//int main()
+//{
+//	int n = 0;
+//	int k = 0;
+//	scanf("%d%d", &n, &k);
+//	double ret = Pow(n,k);
+//	printf("%lf\n", ret);
+//	return 0;
+//}
+
+
 
 #include<stdio.h>
-double Pow(int n, int k)
+int main(void)
 {
-	if (k == 0)
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int* p = arr;
+	int i = 0;
+	for (i = 0; i < 10; i++)
 	{
-		return 1.0;
+		printf("%d ", *p);
+		p++;
 	}
-	else if (k > 0)
-	{
-		return n * Pow(n, k - 1);
-
-	}
-	else
-	{
-		return 1.0 / Pow(n, -k);
-	}
-}
-int main()
-{
-	int n = 0;
-	int k = 0;
-	scanf("%d%d", &n, &k);
-	double ret = Pow(n,k);
-	printf("%lf\n", ret);
 	return 0;
 }
