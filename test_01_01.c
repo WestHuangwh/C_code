@@ -491,7 +491,7 @@
 int main(void)
 {
 	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
-	int* p = arr;
+	int* p = arr;//数组名是数组第一个元素的地址
 	int i = 0;
 	for (i = 0; i < 10; i++)
 	{
