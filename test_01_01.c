@@ -457,6 +457,7 @@
 //}
 
 
+
 ////用递归求n的k次方。
 //#include<stdio.h>
 //double Pow(int n, int k)
@@ -504,23 +505,24 @@
 
 
 
-//#include<stdio.h>
-//int main()
-//{
-//	int arr[][4] = { {1,2},{3,4},{4,5} };
-//	int i = 0;
-//	int j = 0;
-//	for (i = 0; i < 3; i++)
-//	{
-//		for (j = 0; j < 4; j++)
-//		{
-//			printf("$arr[%d][%d] = %p\n", i, j, &arr[i][j]);
-//			 
-//		}
-//
-//	}
-//	return 0;
-//
+#include<stdio.h>
+int main()
+{
+	int arr[][4] = { {1,2},{3,4},{4,5} };
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			printf("$arr[%d][%d] = %p\n", i, j, &arr[i][j]);
+
+		}
+
+	}
+	return 0;
+
+}
 
 
 
@@ -556,13 +558,13 @@
 //}
 
 
-
-
-
-#include<stdio.h>
-int main()
-{
-
-
-	return 0;
-}
+//
+//
+//
+//#include<stdio.h>
+//int main()
+//{
+//
+//
+//	return 0;
+//}
