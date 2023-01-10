@@ -524,7 +524,7 @@
 
 
 
-////冒泡排序从小到大排序
+////冒泡排序数组从小到大排序
 //#include<stdio.h>
 //void bubble_sort(int arr[], int sz)//形参arr本质是指针
 //{
