@@ -496,7 +496,7 @@
 
 //#include<stdio.h>
 //#include<string.h>
-//#include<Windows.h>
+//#include<windows.h>
 //int main()
 //{
 //	char arr1[] = "welcome to bit!!!!!!";

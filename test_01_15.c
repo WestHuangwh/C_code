@@ -49,9 +49,20 @@
 //}
 
 
-#include<stdio.h>
-int main()
+# include<stdio.h>
+# include<windows.h>
+int main(void)
 {
+	system("cls");
+	printf("3");
+	Sleep(1000);
 
+	system("cls");
+	printf("2");
+	Sleep(1000);
+
+	system("cls");
+	printf("1");
+	Sleep(1000);
 	return 0;
 }
