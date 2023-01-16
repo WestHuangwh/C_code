@@ -69,35 +69,45 @@
 
 
 
-//23年1月16日每日一题，算出学长的平均年龄
+////23年1月16日每日一题，算出学长的平均年龄
+//#include<stdio.h>
+//int main()
+//{
+//	int input = 0;
+//	int age = 0;
+//	double num = 0;//input为学长人数，age为学长的年龄，num为学长年龄的总和。
+//	printf("请输入学长人数:>\n");
+//	scanf("%d", &input);
+//	if (input > 1 && input < 100)
+//	{
+//		printf("请输入每位学长的年龄:>\n");
+//		for (int i = 0; i < input; i++)
+//		{
+//			scanf("%d", &age);
+//			if (age < 55 && age>15)
+//			{				
+//				num += age;
+//			}
+//			else
+//			{
+//				printf("学长年龄超出限制，请重新输入");
+//			}
+//		}
+//		printf("学长的平均年龄为\n%.2lf", num / input);
+//	}
+//	else
+//	{
+//		printf("学长人数发生错误，请重新输入");
+//	}
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
 int main()
 {
-	int input = 0;
-	int age = 0;
-	double num = 0;//input为学长人数，age为学长的年龄，num为学长年龄的总和。
-	printf("请输入学长人数:>\n");
-	scanf("%d", &input);
-	if (input > 1 && input < 100)
-	{
-		printf("请输入每位学长的年龄:>\n");
-		for (int i = 0; i < input; i++)
-		{
-			scanf("%d", &age);
-			if (age < 55 && age>15)
-			{				
-				num += age;
-			}
-			else
-			{
-				printf("学长年龄超出限制，请重新输入");
-			}
-		}
-		printf("学长的平均年龄为\n%.2lf", num / input);
-	}
-	else
-	{
-		printf("学长人数发生错误，请重新输入");
-	}
+	int i = 0;
+	for()
 	return 0;
 }
