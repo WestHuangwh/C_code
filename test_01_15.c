@@ -102,31 +102,31 @@
 //	return 0;
 //}
 
-
-
-#include<stdio.h>
-int Fib(int n)
-{
-	int a = 1;
-	int b = 1;
-	int c = 1;
-	while (n > 2)
-	{
-		c = a + b;
-		a = b;
-		b = c;
-		n--;
-	}
-	return c;
-}
-int main()
-{
-	int n = 0;
-	scanf("%d", &n);
-	if (n > 2 && n < 30)
-	{
-		printf("%d\n", Fib(n));
-	}
-
-	return 0;
-}
+//
+////用递归求斐波那契数。
+//#include<stdio.h>
+//int Fib(int n)
+//{
+//	int a = 1;
+//	int b = 1;
+//	int c = 1;
+//	while (n > 2)
+//	{
+//		c = a + b;//把前两个数的和赋值给第三个数
+//		a = b;
+//		b = c;
+//		n--;
+//	}
+//	return c;
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	if (n > 2 && n < 30)
+//	{
+//		printf("%d\n", Fib(n));
+//	}
+//
+//	return 0;
+//}
