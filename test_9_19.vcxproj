@@ -132,6 +132,9 @@
     <ClCompile Include="test_9_19.c" />
     <ClCompile Include="test_12_26.c" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="标头.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
