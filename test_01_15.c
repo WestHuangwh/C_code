@@ -180,57 +180,68 @@
 //}
 
 
-#include<stdio.h>
-void game()
-{
-	char arr[10][10] = { 0 };
-	int i = 0;
+//#include<stdio.h>
+//void game()
+//{
+//	char arr[10][10] = { 0 };
+//	int i = 0;
+//
+//	printf("---------------------\n");
+//	for (i = 0; i < 10; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < 10; j++)
+//		{
+//			arr[i][j] = '0';
+//			printf("%c ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	printf("---------------------\n");
+//}
+//void menu()
+//{
+//	printf("**************************************\n");
+//	printf("*********     1.play         *********\n");
+//	printf("*********     2.设置         *********\n");
+//	printf("*********     0.exit         *********\n");
+//	printf("**************************************\n");
+//}
+//int main()
+//{
+//	int input = 0;
+//	do
+//	{
+//		menu();
+//		printf("请选择:>");
+//		scanf("%d", &input);
+//		switch (input)
+//		{
+//		case 1:
+//			game();
+//			break; 
+//		case 2:
+//			printf("尚未开发，敬请期待\n");
+//			break;
+//		case 0:
+//			printf("退出游戏\n");
+//			break;
+//		default:
+//			printf("输入错误，请重新输入\n");
+//			break;
+//		}
+//
+//	} while (input);
+//	return 0;
+//}
 
-	printf("---------------------\n");
-	for (i = 0; i < 10; i++)
-	{
-		int j = 0;
-		for (j = 0; j < 10; j++)
-		{
-			arr[i][j] = '0';
-			printf("%c ", arr[i][j]);
-		}
-		printf("\n");
-	}
-	printf("---------------------\n");
-}
-void menu()
-{
-	printf("**************************************\n");
-	printf("*********     1.play         *********\n");
-	printf("*********     2.设置         *********\n");
-	printf("*********     0.exit         *********\n");
-	printf("**************************************\n");
-}
+
+
+
+#include<stdio.h>
 int main()
 {
-	int input = 0;
-	do
-	{
-		menu();
-		printf("请选择:>");
-		scanf("%d", &input);
-		switch (input)
-		{
-		case 1:
-			game();
-			break; 
-		case 2:
-			printf("尚未开发，敬请期待\n");
-			break;
-		case 0:
-			printf("退出游戏\n");
-			break;
-		default:
-			printf("输入错误，请重新输入\n");
-			break;
-		}
 
-	} while (input);
+
 	return 0;
 }
