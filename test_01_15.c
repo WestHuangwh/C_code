@@ -180,17 +180,17 @@
 //}
 
 
-#include"БъЭЗ.h"
+#include<stdio.h>
 void game()
 {
-	char arr[ROW][COL] = { 0 };
+	char arr[10][10] = { 0 };
 	int i = 0;
 
 	printf("---------------------\n");
-	for (i = 0; i < ROW; i++)
+	for (i = 0; i < 10; i++)
 	{
 		int j = 0;
-		for (j = 0; j < COL; j++)
+		for (j = 0; j < 10; j++)
 		{
 			arr[i][j] = '0';
 			printf("%c ", arr[i][j]);
