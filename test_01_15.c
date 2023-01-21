@@ -236,12 +236,50 @@
 //}
 
 
-
-
 #include<stdio.h>
+void init(int arr[10],int sz)
+{
+	int i = 0;
+	for (i = 0; i < sz; i++)
+	{
+		arr[i] = 0;
+	}
+}
+
+void print(int arr[10],int sz)
+{
+	int i = 0;
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+
+void reverse(int arr[10], int sz)
+{
+	int i = 0;
+	int n = 0;
+	//int tmp = 0;
+	while (n < (sz -1))
+	{
+		int tmp = arr[n];
+		arr[n] = arr[sz - 1];
+		arr[sz - 1] = tmp;
+		n++;
+		sz--;
+	}
+}
+
+
 int main()
 {
-
-
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	print(arr, sz);
+	reverse(arr, sz); 
+	print(arr, sz);
+	init(arr,sz);
+	print(arr,sz);
 	return 0;
 }
