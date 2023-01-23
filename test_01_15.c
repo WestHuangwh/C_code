@@ -319,16 +319,19 @@
 //1.指针类型决定了：指针解引用的权限有多大
 //2.指针类型决定了：指针走一步，能走多远（步长）
 //3.
-#include<stdio.h>
-int main()
-{
-	int arr[10] = { 0 };
-	int* p = arr;
-	int i = 0;
-	for (i = 0; i < 10; i++)
-	{
-		*(p + i) = 1;
-		printf("%d ", *(p + i));
-	}
-	return 0;
-}
+
+
+////指针遍历数组。
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int* p = arr;
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		*(p + i) = 1;
+//		printf("%d ", *(p + i));
+//	}
+//	return 0;
+//}
