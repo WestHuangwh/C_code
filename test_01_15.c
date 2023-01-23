@@ -285,11 +285,50 @@
 //}
 
 
+//#include<stdio.h>
+//int main()
+//{
+//
+//	int arr1[] = { 1,3,5,7,9 };
+//	int arr2[] = { 2,4,6,8,10 };
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		int tmp = arr1[i];
+//		arr1[i] = arr2[i];
+//		arr2[i] = tmp;
+//
+//	}
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr1[i]);
+//	}
+//	printf("\n");
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr2[i]);
+//	}
+//
+//	return 0;
+//}
+
+
+
+//指针类型的意义
+//1.指针类型决定了：指针解引用的权限有多大
+//2.指针类型决定了：指针走一步，能走多远（步长）
+//3.
 #include<stdio.h>
 int main()
 {
-
-
-
+	int arr[10] = { 0 };
+	int* p = arr;
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		*(p + i) = 1;
+		printf("%d ", *(p + i));
+	}
 	return 0;
 }
