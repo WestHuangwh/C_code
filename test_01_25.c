@@ -127,15 +127,28 @@
 //}
 
 
+//#include<stdio.h>//指针遍历数组
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	int* p = arr;
+//	for (i = 0; i < 10; i++)
+//	{
+//		*(p + i) = i;
+//		printf("%d ", *(p + i));
+//	}
+//	return 0;
+//}
+
+
 #include<stdio.h>
+int main()
 {
-	int arr[10] = { 0 };
-	int i = 0;
-	int* p = arr;
-	for (i = 0; i < 10; i++)
-	{
-		*(p + i) = i;
-		printf("%d ", *(p + i));
-	}
+	int a = 10;
+	int* pa = &a;//pa是指针变量，一级指针
+	int** ppa = &pa;//pa也是一个变量，&pa取出pa在内存中起始地址
+	int*** p = &ppa;
+	printf("%d\n", ***p);
 	return 0;
 }
