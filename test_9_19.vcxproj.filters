@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test_9_19.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="test_01_01.c">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -29,6 +26,9 @@
     </ClCompile>
     <ClCompile Include="test_01_25.c">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test_9_19.c">
+      <Filter>资源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
