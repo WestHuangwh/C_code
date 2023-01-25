@@ -72,9 +72,70 @@
 //}
 
 
-#include<stdio.h>
-int main()
-{
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	//指针和指针相减的前提是：
+//	//两个指针指向同一块空间
+//	printf("%d\n", &arr[9]-&arr[0]);
+//	return 0;
+//}
 
+
+//#include<stdio.h>
+//#include<string.h>
+//int my_strlen(char* str)//用计数器的方法来求字符串的长度
+//{
+//	int count = 0;
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	//strlen(); - 求字符串的长度
+//	int len = my_strlen("abc");//传过去的是字符串的首元素的地址
+//	printf("%d\n", len);
+//
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//#include<string.h>
+//int my_strlen(char* str)//用指针减指针的方法来求字符串的长度
+//{
+//	char* start = str;
+//	while (*str != '\0')
+//	{
+//		str++;
+//	}
+//
+//	return str - start;
+//}
+//int main()
+//{
+//	//strlen(); - 求字符串的长度
+//	int len = my_strlen("abc");//传过去的是字符串的首元素的地址
+//	printf("%d\n", len);
+//
+//	return 0;
+//}
+
+
+#include<stdio.h>
+{
+	int arr[10] = { 0 };
+	int i = 0;
+	int* p = arr;
+	for (i = 0; i < 10; i++)
+	{
+		*(p + i) = i;
+		printf("%d ", *(p + i));
+	}
 	return 0;
 }
