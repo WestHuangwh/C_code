@@ -142,13 +142,22 @@
 //}
 
 
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int* pa = &a;//pa是指针变量，一级指针
+//	//ppa是一个二级指针变量
+//	int** ppa = &pa;//pa也是一个变量，&pa取出pa在内存中起始地址
+//	printf("%d\n", **ppa);
+//	return 0;
+//}
+
+
 #include<stdio.h>
 int main()
 {
-	int a = 10;
-	int* pa = &a;//pa是指针变量，一级指针
-	int** ppa = &pa;//pa也是一个变量，&pa取出pa在内存中起始地址
-	int*** p = &ppa;
-	printf("%d\n", ***p);
+
+
 	return 0;
 }
