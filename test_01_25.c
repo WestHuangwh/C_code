@@ -155,9 +155,30 @@
 
 
 #include<stdio.h>
+struct B
+{
+	char a;
+	int b;
+	double c;
+};
+struct Stu
+{
+	struct B sb;
+	char name[20];
+	int age;
+	char id[20];
+}s1,s2;//s1和s2也是结构体变量
+//s1,s2是全局变量
 int main()
 {
-
+	//s是局部变量
+	struct Stu s = { {'H',20,3.14},"张三",30,"w12345678" };//对象
+	//.  ->
+	//printf("%c\n", s.sb.a);
+	//printf("%s\n", s.id);
+	struct Stu* pa = &s;
+	printf("%s\n", pa->name);
+	printf("%c\n", (*pa).sb.a );
 
 	return 0;
 }
