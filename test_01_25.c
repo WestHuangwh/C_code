@@ -187,35 +187,57 @@
 
 
 
+//#include<stdio.h>
+//struct B
+//{
+//	char a;
+//	int b;
+//	double c;
+//};
+//struct Stu
+//{
+//	struct B sb;
+//	char name[20];
+//	int age;
+//	char id[20];
+//};
+//void print1(struct Stu t)//传值调用
+//{
+//	printf("%c %d %lf %s %d %s\n", t.sb.a, t.sb.b, t.sb.c, t.name, t.age, t.id);
+//}
+//void print2(struct Stu* pa)//传址调用z
+//{
+//	printf("%c %d %lf %s %d %s\n", pa->sb.a, pa->sb.b, pa->sb.c, pa->name, pa->age, pa->id);
+//}
+//int main()
+//{
+//	//s是局部变量
+//	struct Stu s = { {'H',20,3.14},"张三",30,"w12345678" };//对象
+//	//写一个函数打印s的内容
+//	print1(s);
+//	print2(&s);
+//
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
-struct B
-{
-	char a;
-	int b;
-	double c;
-};
-struct Stu
-{
-	struct B sb;
-	char name[20];
-	int age;
-	char id[20];
-};
-void print1(struct Stu t)
-{
-	printf("%c %d %lf %s %d %s\n", t.sb.a, t.sb.b, t.sb.c, t.name, t.age, t.id);
-}
-void print2(struct Stu* pa)
-{
-	printf("%c %d %lf %s %d %s\n", pa->sb.a, pa->sb.b, pa->sb.c, pa->name, pa->age, pa->id);
-}
 int main()
 {
-	//s是局部变量
-	struct Stu s = { {'H',20,3.14},"张三",30,"w12345678" };//对象
-	//写一个函数打印s的内容
-	print1(s);
-	print2(&s);
+	int arr[10] = { 0 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	for (int i = 0; i < sz; i++)
+	{
+		arr[i] = i + 1;
+
+	}	
+	for (int i = 0; i < sz; i++)
+	{
+		arr[i] = i + 1;
+		printf("%d ", arr[i]);
+
+	}
 
 	return 0;
 }
