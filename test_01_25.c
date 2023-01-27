@@ -154,6 +154,39 @@
 //}
 
 
+//#include<stdio.h>
+//struct B
+//{
+//	char a;
+//	int b;
+//	double c;
+//};
+//struct Stu
+//{
+//	//成员变量
+//	struct B sb;
+//	char name[20];//名字
+//	int age;//年龄
+//	char id[20];
+//}s1,s2;//s1和s2也是结构体变量
+////s1,s2是全局变量
+//int main()
+//{
+//	//s是局部变量
+//	struct Stu s = { {'H',20,3.14},"张三",30,"w12345678" };//对象
+//	//.  ->
+//	//printf("%c\n", s.sb.a);
+//	//printf("%s\n", s.id);
+//	struct Stu* pa = &s;
+//	printf("%c\n", (*pa).sb.a);
+//	//使用结构体指针访问指向对象的成员
+//	printf("%s\n", pa->name);
+//
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
 struct B
 {
@@ -167,18 +200,17 @@ struct Stu
 	char name[20];
 	int age;
 	char id[20];
-}s1,s2;//s1和s2也是结构体变量
-//s1,s2是全局变量
+};
+void print1(struct Stu t)
+{
+	printf("%c %d %lf %s %d %s\n", t.sb.a, t.sb.b, t.sb.c, t.name, t.age, t.id);
+}
 int main()
 {
 	//s是局部变量
 	struct Stu s = { {'H',20,3.14},"张三",30,"w12345678" };//对象
-	//.  ->
-	//printf("%c\n", s.sb.a);
-	//printf("%s\n", s.id);
-	struct Stu* pa = &s;
-	printf("%s\n", pa->name);
-	printf("%c\n", (*pa).sb.a );
+	//写一个函数打印s的内容
+	print1(s);
 
 	return 0;
 }
