@@ -223,6 +223,14 @@
 
 
 #include<stdio.h>
+void test()
+{
+	int a = 0;
+	int b = 0;
+	int c = a + b;
+
+}
+
 int main()
 {
 	int arr[10] = { 0 };
@@ -234,6 +242,7 @@ int main()
 	}	
 	for (int i = 0; i < sz; i++)
 	{
+		test();
 		arr[i] = i + 1;
 		printf("%d ", arr[i]);
 
