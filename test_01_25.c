@@ -303,14 +303,58 @@
 
 
 
+////Ä£ÄâÊµÏÖstrcpy
+////strcpy - ×Ö·û´®¿½±´
+//#include<stdio.h>
+//#include<string.h>
+//void my_strcpy(char* dest, char* src)
+//{
+//	int sz = strlen(dest);
+//	int sz1 = strlen(src);
+//	char* pc = dest;
+//	char* pc2 = src;
+//	for (int i = 0; i < sz; i++)
+//	{
+//		*(pc + i) = src[i];
+//	}
+//
+//}
+//int main()
+//{
+//	char arr1[20] = "xxxxxxxxxxx";
+//	char arr2[20] = "Hello";
+//	//strcpy(arr1, arr2);
+//	my_strcpy(arr1, arr2);
+//	printf("%s\n", arr1);
+//	//printf("%s\n", arr2);
+//	return 0;
+//}
+
+
+
+
 //Ä£ÄâÊµÏÖstrcpy
 //strcpy - ×Ö·û´®¿½±´
 #include<stdio.h>
+#include<string.h>
+void my_strcpy(char* dest, char* src)
+{
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+		*dest = *src;
+	}
+	*dest = *src;
+}
 int main()
 {
 	char arr1[20] = "xxxxxxxxxxx";
 	char arr2[20] = "Hello";
-	strcpy(arr1,arr2); 
-
+	//strcpy(arr1, arr2);
+	my_strcpy(arr1, arr2);
+	printf("%s\n", arr1);
+	//printf("%s\n", arr2);
 	return 0;
 }
