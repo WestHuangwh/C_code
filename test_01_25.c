@@ -303,7 +303,7 @@
 
 
 
-////模拟实现strcpy
+////模拟实现strcpy（1）
 ////strcpy - 字符串拷贝
 //#include<stdio.h>
 //#include<string.h>
@@ -324,7 +324,7 @@
 //	char arr1[20] = "xxxxxxxxxxx";
 //	char arr2[20] = "Hello";
 //	//strcpy(arr1, arr2);
-//	my_strcpy(arr1, arr2);
+//	my_strcpy(arr1, arr2);//传递的是字符串的首地址，左边的是目标空间的起始地址，右边是源空间的起始地址
 //	printf("%s\n", arr1);
 //	//printf("%s\n", arr2);
 //	return 0;
@@ -333,27 +333,73 @@
 
 
 
-//模拟实现strcpy
+////模拟实现strcpy（2）
+////strcpy - 字符串拷贝
+//#include<stdio.h>
+//#include<string.h>
+//void my_strcpy(char* dest, char* src)
+//{
+//	while (*src != '\0')
+//	{
+//		*dest++ = *src++;
+//	}
+//	*dest = *src;//为了把最后的\0给拷贝过去
+//}
+//int main()
+//{
+//	char arr1[20] = "xxxxxxxxxxx";
+//	char arr2[20] = "Hello";
+//	//strcpy(arr1, arr2);
+//	my_strcpy(arr1, arr2);//传递的是字符串的首地址，左边的是目标空间的起始地址，右边是源空间的起始地址
+//	printf("%s\n", arr1);
+//	//printf("%s\n", arr2);
+//	return 0;
+//}
+
+
+////模拟实现strcpy（3）
+////strcpy - 字符串拷贝
+//#include<stdio.h>
+//#include<string.h>
+//void my_strcpy(char* dest, char* src)
+//{
+//	while (*dest++ = *src++)
+//	{
+//		//Hello的拷贝
+//	}
+//}
+//int main()
+//{
+//	char arr1[20] = "xxxxxxxxxxx";
+//	char arr2[20] = "Hello";
+//	//strcpy(arr1, arr2);
+//	my_strcpy(arr1, arr2);//传递的是字符串的首地址，左边的是目标空间的起始地址，右边是源空间的起始地址
+//	printf("%s\n", arr1);
+//	//printf("%s\n", arr2);
+//	return 0;
+//}
+
+
+//模拟实现strcpy（3）,进行了优化
 //strcpy - 字符串拷贝
 #include<stdio.h>
 #include<string.h>
+#include<assert.h>
 void my_strcpy(char* dest, char* src)
 {
-	while (*src != '\0')
+	assert(dest&&src != NULL);//断言
+	//assert(src!=NULL);//断言
+	while (*dest++ = *src++)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		*dest = *src;
+		//Hello的拷贝
 	}
-	*dest = *src;
 }
 int main()
 {
 	char arr1[20] = "xxxxxxxxxxx";
 	char arr2[20] = "Hello";
 	//strcpy(arr1, arr2);
-	my_strcpy(arr1, arr2);
+	my_strcpy(arr1, arr2);//传递的是字符串的首地址，左边的是目标空间的起始地址，右边是源空间的起始地址
 	printf("%s\n", arr1);
 	//printf("%s\n", arr2);
 	return 0;
