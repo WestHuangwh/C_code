@@ -275,25 +275,42 @@
 
 
 
+
+////计算n的阶乘和1！+2！+3！+...+n!的和
+//#include<stdio.h>
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int sum = 0;
+//	int j = 0;
+//	int ret = 1;
+//	int i = 1;
+//	for (j = 1; j <= n; j++)
+//	{
+//		ret = 1;
+//		for (i = 1; i <= j; i++)
+//		{
+//			ret *= i;
+//		}
+//		sum += ret;
+//	}
+//	
+//	printf("%d\n", ret);
+//	printf("%d\n", sum);
+//	return 0;
+//}
+
+
+
+//模拟实现strcpy
+//strcpy - 字符串拷贝
 #include<stdio.h>
 int main()
 {
-	int n = 0;
-	scanf("%d", &n);
-	int sum = 0;
-	int j = 0;
-	int i = 1;
-	for (j = 1; j <= n; j++)
-	{
-		int ret = 1;
-		for (i = 1; i <= j; i++)
-		{
-			ret *= i;
-		}
-		sum += ret;
-	}
-	
-	//printf("%d\n", ret);
-	printf("%d\n", sum);
+	char arr1[20] = "xxxxxxxxxxx";
+	char arr2[20] = "Hello";
+	strcpy(arr1,arr2); 
+
 	return 0;
 }
