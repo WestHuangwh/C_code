@@ -205,7 +205,7 @@
 //{
 //	printf("%c %d %lf %s %d %s\n", t.sb.a, t.sb.b, t.sb.c, t.name, t.age, t.id);
 //}
-//void print2(struct Stu* pa)//传址调用z
+//void print2(struct Stu* pa)//传址调用
 //{
 //	printf("%c %d %lf %s %d %s\n", pa->sb.a, pa->sb.b, pa->sb.c, pa->name, pa->age, pa->id);
 //}
@@ -222,31 +222,78 @@
 
 
 
+//#include<stdio.h>
+//void test()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int c = a + b;
+//
+//}
+//
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (int i = 0; i < sz; i++)
+//	{
+//		arr[i] = i + 1;
+//
+//	}	
+//	for (int i = 0; i < sz; i++)
+//	{
+//		test();
+//		arr[i] = i + 1;
+//		printf("%d ", arr[i]);
+//
+//	}
+//
+//	return 0;
+//}
+
+
+
+//函数的链式访问
+//#include<stdio.h>
+//void test2()
+//{
+//	printf("你好啊\n");
+//}
+//void test1()
+//{
+//	test2();
+//}
+//void test()
+//{
+//	test1();
+//}
+//int main()
+//{
+//	test();
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
-void test()
-{
-	int a = 0;
-	int b = 0;
-	int c = a + b;
-
-}
-
 int main()
 {
-	int arr[10] = { 0 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	for (int i = 0; i < sz; i++)
+	int n = 0;
+	scanf("%d", &n);
+	int sum = 0;
+	int j = 0;
+	int i = 1;
+	for (j = 1; j <= n; j++)
 	{
-		arr[i] = i + 1;
-
-	}	
-	for (int i = 0; i < sz; i++)
-	{
-		test();
-		arr[i] = i + 1;
-		printf("%d ", arr[i]);
-
+		int ret = 1;
+		for (i = 1; i <= j; i++)
+		{
+			ret *= i;
+		}
+		sum += ret;
 	}
-
+	
+	//printf("%d\n", ret);
+	printf("%d\n", sum);
 	return 0;
 }
