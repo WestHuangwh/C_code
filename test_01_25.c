@@ -380,55 +380,57 @@
 //}
 
 
-////模拟实现strcpy（3）,进行了优化
-////strcpy - 字符串拷贝
-//#include<stdio.h>
-//#include<string.h>
-//#include<assert.h>
-//void my_strcpy(char* dest, const char* src)//const对象不能改变
-//{
-//	assert(dest != NULL);//断言
-//	assert(src!=NULL);//断言
-//	while (*dest++ = *src++)
-//	{
-//		//Hello的拷贝
-//	}
-//}
-//int main()
-//{
-//	char arr1[20] = "xxxxxxxxxxx";
-//	char arr2[20] = "Hello";
-//	//strcpy(arr1, arr2);
-//	my_strcpy(arr1, arr2);//传递的是字符串的首地址，左边的是目标空间的起始地址，右边是源空间的起始地址
-//	printf("%s\n", arr1);
-//	//printf("%s\n", arr2);
-//	return 0;
-//}
-
-
-
+//模拟实现strcpy（3）,进行了优化
+//strcpy - 字符串拷贝
 #include<stdio.h>
+#include<string.h>
+#include<assert.h>
+char* my_strcpy(char* dest, const char* src)//const对象不能改变
+{
+	assert(dest != NULL);//断言
+	assert(src!=NULL);//断言
+	char* ret = dest;
+	while (*dest++ = *src++)
+	{
+		//Hello的拷贝
+	}
+	return ret;
+}
 int main()
 {
-	/*int num = 10;
-	int* p = &num;
-	*p = 20;
-	printf("%d\n", num);*/
-	//
-	//const 修饰变量，这个变量就被称为常变量，不能被修改，但是本质上还是变量
-	//
-	const int num = 10;
-	
-
-	//const修饰指针变量的时候
-	//const如果放在*的左边，修饰的是*p表示指针指向的内容是不能通过指针来改变的
-	//		但是指针变量本身是可以修改的
-	const int* p  = &num;
-	*p = 20;
-	int** pa = &p;
-	printf("%d\n", num);
+	char arr1[20] = "xxxxxxxxxxx";
+	char arr2[20] = "Hello";
+	//strcpy(arr1, arr2);
+	my_strcpy(arr1, arr2);//传递的是字符串的首地址，左边的是目标空间的起始地址，右边是源空间的起始地址
+	printf("%s\n", my_strcpy(arr1, arr2));
+	//printf("%s\n", arr2);
 	return 0;
 }
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	/*int num = 10;
+//	int* p = &num;
+//	*p = 20;
+//	printf("%d\n", num);*/
+//	//
+//	//const 修饰变量，这个变量就被称为常变量，不能被修改，但是本质上还是变量
+//	//
+//	const int num = 10;
+//	
+//
+//	//const修饰指针变量的时候
+//	//const如果放在*的左边，修饰的是*p表示指针指向的内容是不能通过指针来改变的
+//	//		但是指针变量本身是可以修改的
+//	const int* p  = &num;
+//	*p = 20;
+//	int** pa = &p;
+//	printf("%d\n", num);
+//	return 0;
+//}
 
 
 
