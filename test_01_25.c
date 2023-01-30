@@ -435,24 +435,33 @@
 
 
 
+//#include<stdio.h>
+//#include<string.h>
+//#include<assert.h>
+//int my_strlen(const char* str)//用计数器的方法来求字符串的长度
+//{
+//	assert(str != NULL);//断言
+//	int count = 0;
+//	while (*str++)//如果str指向\0的时候，while循环停止，因为\0的阿斯玛值为零
+//	{
+//		count++;
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	//strlen(); - 求字符串的长度
+//	int len = my_strlen("abc");//传过去的是字符串的首元素的地址
+//	printf("字符串的长度为:>%d\n", len);
+//
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
-#include<string.h>
-#include<assert.h>
-int my_strlen(const char* str)//用计数器的方法来求字符串的长度
-{
-	assert(str != NULL);//断言
-	int count = 0;
-	while (*str++)//如果str指向\0的时候，while循环停止，因为\0的阿斯玛值为零
-	{
-		count++;
-	}
-	return count;
-}
 int main()
 {
-	//strlen(); - 求字符串的长度
-	int len = my_strlen("abc");//传过去的是字符串的首元素的地址
-	printf("字符串的长度为:>%d\n", len);
 
 	return 0;
 }
