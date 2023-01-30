@@ -407,19 +407,136 @@
 
 
 
+//#include<stdio.h>
+//int main()
+//{
+//	/*int num = 10;
+//	int* p = &num;
+//	*p = 20;
+//	printf("%d\n", num);*/
+//	//
+//	//const 修饰变量，这个变量就被称为常变量，不能被修改，但是本质上还是变量
+//	//
+//	const int num = 10;
+//	
+//
+//	//const修饰指针变量的时候
+//	//const如果放在*的左边，修饰的是*p表示指针指向的内容是不能通过指针来改变的
+//	//		但是指针变量本身是可以修改的
+//	const int* p  = &num;
+//	*p = 20;
+//	int** pa = &p;
+//	printf("%d\n", num);
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+void game()
+{
+	//生成随机数
+	int ret = rand() % 100 + 1;
+	//猜数字
+	int gues = 0;
+	int count = 1;
+	while (1)
+	{
+		printf("请输入您猜的数字：>");
+		scanf("%d", &gues);
+		if (gues < ret)
+		{
+			printf("猜小了\n");
+
+		}
+		else if (gues > ret)
+		{
+			printf("猜大了\n");
+		}
+			
+		else
+		{
+			printf("恭喜您，猜对了\n");
+			break;
+		}
+		count++;
+			
+	}
+	printf("最终输入了%d次", count);
+}
 int main()
 {
-	/*int num = 10;
-	int* p = &num;
-	*p = 20;
-	printf("%d\n", num);*/
-	//
-	//const 修饰变量，这个变量就被称为常变量，不能被修改，但是本质上还是变量
-	//
-	const int num = 10;
-	int* p = &num;
-	*p = 20;
-	printf("%d\n", num);
+	srand((unsigned int)time(NULL));
+	game();
 	return 0;
 }
+
+
+
+////猜数字游戏,范围在1-100之间
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<time.h>
+//void menu()
+//{
+//	printf("*************************************\n");
+//	printf("******     1.play     ***************\n");
+//	printf("******     0.exit     ***************\n");
+//	printf("*************************************\n");
+//}
+//void game()//猜数字游戏的实现
+//{
+//	//1.生成随机数
+//	int ret = rand()%100+1;//模100的余数是0-99，然后+1就是1-100
+//	//printf("%d\n", ret);
+//
+//	//2.猜数字
+//	int gues = 0;
+//
+//	while (1)
+//	{
+//		printf("请猜数字:>");
+//		scanf("%d", &gues);
+//		if (gues < ret)
+//		{
+//			printf("猜小了\n");
+//		}
+//		else if(gues>ret)
+//		{
+//			printf("猜大了\n");
+//		}
+//		else
+//		{
+//			printf("恭喜您，猜对了");
+//			break;
+//		}
+//	}
+//}
+//int main()
+//{
+//	int input = 0;
+//	srand((unsigned int)time(NULL));
+//	 
+//	do
+//	{
+//		menu();//打印菜单
+//		printf("请选择:>");
+//		scanf("%d", &input);
+//		switch(input)
+//		{
+//			case 1:
+//				game();
+//				break;
+//			case 0:
+//				printf("退出游戏\n");
+//				break;
+//			default:
+//				printf("输入错误，请重新输入\n");
+//		}
+//
+//	} while (input);
+//
+//	return 0;
+//}
