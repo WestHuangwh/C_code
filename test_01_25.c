@@ -85,13 +85,14 @@
 
 //#include<stdio.h>
 //#include<string.h>
-//int my_strlen(char* str)//用计数器的方法来求字符串的长度
+//#include<assert.h>
+//int my_strlen(const char* str)//用计数器的方法来求字符串的长度
 //{
+//	assert(str != NULL);
 //	int count = 0;
-//	while (*str != '\0')
+//	while (*str++)
 //	{
 //		count++;
-//		str++;
 //	}
 //	return count;
 //}
@@ -380,32 +381,32 @@
 //}
 
 
-//模拟实现strcpy（3）,进行了优化
-//strcpy - 字符串拷贝
-#include<stdio.h>
-#include<string.h>
-#include<assert.h>
-char* my_strcpy(char* dest, const char* src)//const对象不能改变
-{
-	assert(dest != NULL);//断言
-	assert(src!=NULL);//断言
-	char* ret = dest;
-	while (*dest++ = *src++)
-	{
-		//Hello的拷贝
-	}
-	return ret;
-}
-int main()
-{
-	char arr1[20] = "xxxxxxxxxxx";
-	char arr2[20] = "Hello";
-	//strcpy(arr1, arr2);
-	my_strcpy(arr1, arr2);//传递的是字符串的首地址，左边的是目标空间的起始地址，右边是源空间的起始地址
-	printf("%s\n", my_strcpy(arr1, arr2));
-	//printf("%s\n", arr2);
-	return 0;
-}
+////模拟实现strcpy（3）,进行了优化
+////strcpy - 字符串拷贝
+//#include<stdio.h>
+//#include<string.h>
+//#include<assert.h>
+//char* my_strcpy(char* dest, const char* src)//const对象不能改变
+//{
+//	assert(dest != NULL);//断言
+//	assert(src!=NULL);//断言
+//	char* ret = dest;
+//	while (*dest++ = *src++)
+//	{
+//		//Hello的拷贝
+//	}
+//	return ret;
+//}
+//int main()
+//{
+//	char arr1[20] = "xxxxxxxxxxx";
+//	char arr2[20] = "Hello";
+//	//strcpy(arr1, arr2);
+//	my_strcpy(arr1, arr2);//传递的是字符串的首地址，左边的是目标空间的起始地址，右边是源空间的起始地址
+//	printf("%s\n", my_strcpy(arr1, arr2));//链式访问，并且函数返回参数为char*类型。
+//	//printf("%s\n", arr2);
+//	return 0;
+//}
 
 
 
@@ -434,6 +435,24 @@ int main()
 
 
 
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+int my_strlen(const char* str)//用计数器的方法来求字符串的长度
+{
+	assert(str != NULL);//断言
+	int count = 0;
+	while (*str++)//如果str指向\0的时候，while循环停止，因为\0的阿斯玛值为零
+	{
+		count++;
+	}
+	return count;
+}
+int main()
+{
+	//strlen(); - 求字符串的长度
+	int len = my_strlen("abc");//传过去的是字符串的首元素的地址
+	printf("字符串的长度为:>%d\n", len);
 
-
-
+	return 0;
+}
