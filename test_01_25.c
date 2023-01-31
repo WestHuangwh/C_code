@@ -473,34 +473,47 @@
 //}
 
 
+////求最小公倍数
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d %d", &a, &b);
+//	int max = a > b ? a : b;
+//	while (1)
+//	{
+//		if (max % a == 0 && max % b == 0)
+//		{
+//			printf("%d", max);
+//			break;
+//		}
+//		max++;
+//	}
+//	return 0;
+//}
+
+
 
 #include<stdio.h>
 int main()
 {
-	int a = 0;
-	int b = 0;
-	scanf("%d %d", &a, &b);
+	char arr[20] = { 0 };
+	scanf("%s", arr);
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	char* p = arr;
 	int i = 0;
-	if (a > b)
+	for (i = sz; i >= 0; i--)
 	{
-		for(i = a; i <= a*b; i++)
+		if ((*p--) == ' ')
 		{
-			if (i % a == i % b)
+			int j = 0;
+			for (j = i+1; j <= sz; j++)
 			{
-				printf("%d", i);
-				break;
+				printf("%c", *(p+j));
 			}
-		}
-	}
-	if (b > a)
-	{
-		for (i = b; i <= a * b; i++)
-		{
-			if (i % a == i % b)
-			{
-				printf("%d", i);
-				break;
-			}
+			break;
+
 		}
 	}
 	return 0;
