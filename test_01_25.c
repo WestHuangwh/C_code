@@ -498,23 +498,14 @@
 #include<stdio.h>
 int main()
 {
-	char arr[20] = { 0 };
+	char arr[][10] = {0};
+	char arr2[] = { 0 };
 	scanf("%s", arr);
-	int sz = sizeof(arr) / sizeof(arr[0]);
 	char* p = arr;
-	int i = 0;
-	for (i = sz; i >= 0; i--)
+	while ((*p++) != ' ')
 	{
-		if ((*p--) == ' ')
-		{
-			int j = 0;
-			for (j = i+1; j <= sz; j++)
-			{
-				printf("%c", *(p+j));
-			}
-			break;
-
-		}
+		 arr[1][10] = *p;
 	}
+	
 	return 0;
 }
