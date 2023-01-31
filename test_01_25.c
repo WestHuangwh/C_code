@@ -498,14 +498,7 @@
 #include<stdio.h>
 int main()
 {
-	char arr[][10] = {0};
-	char arr2[] = { 0 };
-	scanf("%s", arr);
-	char* p = arr;
-	while ((*p++) != ' ')
-	{
-		 arr[1][10] = *p;
-	}
+	
 	
 	return 0;
 }
