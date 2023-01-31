@@ -477,6 +477,31 @@
 #include<stdio.h>
 int main()
 {
-
+	int a = 0;
+	int b = 0;
+	scanf("%d %d", &a, &b);
+	int i = 0;
+	if (a > b)
+	{
+		for(i = a; i <= a*b; i++)
+		{
+			if (i % a == i % b)
+			{
+				printf("%d", i);
+				break;
+			}
+		}
+	}
+	if (b > a)
+	{
+		for (i = b; i <= a * b; i++)
+		{
+			if (i % a == i % b)
+			{
+				printf("%d", i);
+				break;
+			}
+		}
+	}
 	return 0;
 }
