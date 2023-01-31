@@ -459,14 +459,24 @@
 
 
 
+////不创建临时变量，交换两个整数的内容。
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	a = a ^ b;//异或，a^b相当于密码，再和b异或就等于a的值
+//	b = a ^ b;
+//	a = a ^ b;
+//	printf("a = %d,b = %d", a, b);
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
 int main()
 {
-	int a = 10;
-	int b = 20;
-	a = a ^ b;
-	b = a ^ b;
-	a = a ^ b;
-	printf("a = %d,b = %d", a, b);
+
 	return 0;
 }
