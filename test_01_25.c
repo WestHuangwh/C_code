@@ -495,47 +495,50 @@
 
 
 
-#include<stdio.h>
-#include<string.h>
-void rever(char*left, char*right)
-{
-	while (left < right)
-	{
-		char tmp = *right;
-		*right = *left;
-		*left = tmp;
-		left++;
-		right--;
-	}
-	
-}
-int main()
-{
-	char arr[20] = { 0 };
-	gets(arr);
-	int len = strlen(arr);
-	rever(arr, arr + len - 1);
-	char* start = arr;
-	while (*start)
-	{
-		char* end = start;
-		while (*end != ' ' && *end != '\0')
-		{
-			end++;
-		}
-
-		rever(start, end - 1);
-		if (*end == ' ')
-		{
-			start = end+1;
-		}
-		else
-		{
-			start = end;
-		}
-
-	}
-	printf("%s", arr);
-	
-	return 0;
-}
+////倒置字符串，将一句话的单词进行倒置，标点不倒置。
+////比如 l like beijing.经过函数后变为：beijing.like l
+//#include<stdio.h>
+//#include<string.h>
+//void rever(char*left, char*right)
+//{
+//	while (left < right)
+//	{
+//		char tmp = *right;
+//		*right = *left;
+//		*left = tmp;
+//		left++;
+//		right--;
+//	}
+//	
+//}
+//int main()
+//{
+//	char arr[20] = { 0 };
+//	gets(arr);//gets是为了输入一整串带空格的字符串，不能用scanf函数，因为scanf函数碰到空格会停止。
+//	int len = strlen(arr);
+//	rever(arr, arr + len - 1);
+//	char* start = arr;
+//	//用到了三步翻转法，先把字符串首尾倒置，再单个单词再进行一次倒置
+//	while (*start)
+//	{
+//		char* end = start;
+//		while (*end != ' ' && *end != '\0')//字符串中有空格和字符串尾部的\0
+//		{
+//			end++;
+//		}
+//
+//		rever(start, end - 1);
+//		if (*end == ' ')
+//		{
+//			start = end+1;//end+1是为了跳过空格
+//		}
+//		else
+//		{
+//			start = end;
+//		}
+//
+//	}
+//	printf("%s", arr);
+//	
+//	return 0;
+//}
