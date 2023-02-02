@@ -26,10 +26,3 @@
 
 
 
-#include<stdio.h>
-int main()
-{
-	char a = 130;
-	printf("%d\n", a);
-	return 0;
-}
