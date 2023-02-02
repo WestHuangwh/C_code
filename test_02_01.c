@@ -21,11 +21,13 @@
 //	{
 //		printf("大端\n");
 //	}
+//	   //*p == 1 ? printf("小端\n") : printf("大端\n");//三目操作符
+// 
 //	return 0;
 //}
 
 
-//
+
 //#include<stdio.h>
 //int main()
 //{
@@ -33,3 +35,4 @@
 //
 //	return 0;
 //}
+

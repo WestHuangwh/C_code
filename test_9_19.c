@@ -227,11 +227,11 @@
 //int main()
 //{
 //	int a = 9;
-//	int b = a << 1;//向左移动一个二进制位。由二进制的201变为二进制的2010，所以以十进制打印出来就变成了18
+//	int b = a << 1;//向左移动一个二进制位。由二进制的1001变为二进制的10010，所以以十进制打印出来就变成了18
 //	printf("%d", b);
 //
 //	return 0;
-//
+//}
 
 
 
@@ -248,8 +248,6 @@
 
 
 
-
-//
 //#include<stdio.h>
 //int main()
 //{
@@ -282,19 +280,19 @@
 
 
 
-//
+
 //#include<stdio.h>
 //int main()
 //{
 //	int arr[10] = { 0 };
 //	printf("%d\n", sizeof(arr[0]));//计算的是第一个数组的长度。
 //	printf("%d\n", sizeof(arr));//计算的是整个数组的长度。
-//	int sz = sizeof(arr) / sizeof(arr[0]);//计算的是数组的个数。
+//	int sz = sizeof(arr) / sizeof(arr[0]);//计算的是数组的元素个数。
 //	printf("%d\n", sz);
 //
 //	return 0;
 //}
-
+//
 
 
 
@@ -320,7 +318,7 @@
 //	printf("%d\n", b);
 //	printf("%d\n", a);
 //	return 0;
-//
+//}
 
 
 
@@ -337,7 +335,9 @@
 //	return 0;
 //}
 
-//
+
+
+
 //#include<stdio.h>
 //void test()
 //{
