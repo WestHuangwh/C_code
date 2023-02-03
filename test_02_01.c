@@ -31,7 +31,18 @@
 #include<stdio.h>
 int main()
 {
-	
+	int a = 10;
+	int* p = 10;
+	char ch = 'w';
+	char* pc = &ch;
+	double* d[5];
+
+	//int arr[10] = {1,2,3,4,5};
+	//int (*parr)[10]= &arr;//取出的是数组的地址
+
+	//parr 就是一个数组指针 - 其中存放的是数组的地址
+
+	//arr;//arr是数组首元素的地址，等同于arr[0]的地址
 
 	return 0;
 }
