@@ -26,24 +26,36 @@
 //	return 0;
 //}
 
+//
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int* p = 10;
+//	char ch = 'w';
+//	char* pc = &ch;
+//	double* d[5];//这是一个指针数组
+//	double*(*pd)[10] = &d;// 数组指针指向指针数组
+//
+//	//int arr[10] = {1,2,3,4,5};
+//	//int (*parr)[10]= &arr;//取出的是数组的地址
+//
+//	//parr 就是一个数组指针 - 其中存放的是数组的地址
+//
+//	//arr;//arr是数组首元素的地址，等同于arr[0]的地址
+//
+//	return 0;
+//}
+
 
 
 #include<stdio.h>
 int main()
 {
-	int a = 10;
-	int* p = 10;
-	char ch = 'w';
-	char* pc = &ch;
-	double* d[5];
-
-	//int arr[10] = {1,2,3,4,5};
-	//int (*parr)[10]= &arr;//取出的是数组的地址
-
-	//parr 就是一个数组指针 - 其中存放的是数组的地址
-
-	//arr;//arr是数组首元素的地址，等同于arr[0]的地址
+	int arr[10] = { 0 };
+	printf("%p\n", arr);
+	printf("%p\n", &arr);
 
 	return 0;
 }
-
