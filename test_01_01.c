@@ -26,7 +26,7 @@
 //	int t = 0;
 //	t = *pa;
 //	*pa = *pb;
-//	*pb = t;
+//	*pb = tmp;
 //}
 //int main()
 //{
