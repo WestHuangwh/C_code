@@ -23,7 +23,7 @@
 //#include<stdio.h>
 //void Add(int* pa, int* pb)//void表示函数没有返回值。
 //{
-//	int t = 0;
+//	int tmp = 0;
 //	t = *pa;
 //	*pa = *pb;
 //	*pb = tmp;
