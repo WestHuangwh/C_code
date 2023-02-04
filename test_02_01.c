@@ -50,12 +50,19 @@
 
 
 
-#include<stdio.h>
-int main()
-{
-	int arr[10] = { 0 };
-	printf("%p\n", arr);
-	printf("%p\n", &arr);
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	printf("%p\n", arr);
+//	printf("%p\n", &arr);
+//
+//	return 0;
+//}
 
-	return 0;
-}
+
+//
+//数组名是数组首元素的地址
+//但有两个例外：
+//1.sizeof(数组名) -- 数组名表示整个数组，计算的是整个数组的大小，单位是字节
+//2.&数组名 -- 数组名表示整个数组，取出的是整个数组的地址
