@@ -83,35 +83,53 @@
 
 
 
-#include<stdio.h>
-void print(int arr[3][5], int r, int c)
-{
-	for (int i = 0; i < r; i++)
-	{
-		for (int j = 0; j < c; j++)
-		{
-			printf("%d ", arr[i][j]);
-		}
-		printf("\n");
-	}
-}
+//#include<stdio.h>
+//void print(int arr[3][5], int r, int c)
+//{
+//	for (int i = 0; i < r; i++)
+//	{
+//		for (int j = 0; j < c; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+//
+////p是一个数组指针
+//void print2(int (*p)[5], int r, int c)
+//{
+//	for (int i = 0; i < r; i++)
+//	{
+//		for (int j = 0; j < c; j++)
+//		{
+//			printf("%d ",*(*(p+i)+j));
+//		}
+//		printf("\n");
+//	}
+//}
+//int main()
+//{
+//	int arr[3][5] = { {1,2,3,4,5},{2,3,4,5,6},{3,4,5,6,7} };
+//	//print(arr, 3, 5);//直接for循环遍历二维数组
+//
+//	print2(arr, 3, 5);// arr是二维数组的首元素的地址，二维数组的首元素的地址是：第一行！
+//	return 0;
+//}
 
-//p是一个数组指针
-void print2(int (*p)[5], int r, int c)
-{
-	for (int i = 0; i < r; i++)
-	{
-		for (int j = 0; j < c; j++)
-		{
-			printf("%d ",*(*(p+i)+j));
-		}
-		printf("\n");
-	}
-}
+
+
+//parr3是一个存储数组指针的指针数组，
+//该数组能够存放10个数组指针,每个数组指针指向一个数组，
+//数组五个元素，每个元素是int类型的
+//int（* parr3[10])[5];
+
+
+
+#include<stdio.h>
 int main()
 {
-	int arr[3][5] = { {1,2,3,4,5},{2,3,4,5,6},{3,4,5,6,7} };
-	print(arr, 3, 5);
-	print2(arr, 3, 5);// arr是二维数组的首元素的地址，二维数组的首元素的地址是：第一行！
+
+
 	return 0;
 }
