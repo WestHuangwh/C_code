@@ -126,10 +126,63 @@
 
 
 
+////求出0~100000之间所有的水“仙花数”并输出
+//// 比如说153= 1^3+5^3+3^3  所以153就是一个水仙花数。
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	for (int i = 0; i <=100000; i++)
+//	{
+//		int n = 1;
+//		int tmp = i;
+//		while (tmp / 10)
+//		{
+//			n++;
+//			tmp=tmp / 10;
+//		}
+//		tmp = i;
+//		int sum = 0;
+//		while (tmp)
+//		{
+//			//pow是用来求次方数的
+//			sum += pow(tmp % 10, n);
+//			tmp /=10;
+//		}
+//		if (i == sum)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//
+//
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
+#include<string.h>
+void reverse(char arr1[], int sz)
+{
+	char* ch = arr1;
+	char* pch = arr1 + sz - 1;
+	while (ch < pch)
+	{
+		char tmp = *(pch);
+		*(pch) = *(ch);
+		*(ch) = tmp;
+		ch++;
+		pch--;
+		
+	}
+	
+}
 int main()
 {
-
-
+	char arr[] =  "abcdef" ;
+	int sz = strlen(arr);
+	reverse(arr, sz);
+	printf("%s\n", arr);
 	return 0;
 }
