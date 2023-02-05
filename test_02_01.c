@@ -188,36 +188,116 @@
 //}
 
 
+////打印一个杨辉三角
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10][10] = { 0 };
+//	for (int i = 0; i < 10; i++)
+//	{
+//		for (int j = 0; j <= i; j++)
+//		{
+//			if (j == 0)
+//			{
+//				arr[i][j] = 1;
+//			}
+//			if (j == i)
+//			{
+//				arr[i][j] = 1;
+//			}
+//			if (j >= 1 && i >= 2)
+//			{
+//				arr[i][j] = arr[i - 1][j] + arr[i - 1][j - 1];
+//			}
+//		}
+//	}
+//	for (int i = 0; i < 10; i++)
+//	{
+//		for (int j = 0; j <= i; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//int main()
+//{
+//	//函数指针 -- 存放函数地址的指针 
+//	//&函数名 -- 取到的就是函数的地址
+//
+//	//&函数名==函数名
+//	printf("%p\n", &Add);
+//	printf("%p\n", Add);
+//
+//	//pf就是一个函数指针变量
+//	int (*pf)(int, int) = &Add;//int 是函数的返回类型，
+//	int ret = (*pf)(3, 5);//(*pf)相当于函数名，（3,5）传入参数。
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//void test(char* str)
+//{
+//
+//
+//}
+//int main()
+//{
+//	void (*pt)(char*)=&test;
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//
+//int main()
+//{
+//	//pf是一个函数指针变量
+//	//int (*pf)(int,int) = &Add;
+//	
+//	int (*pf)(int,int) = Add;//Add==pf，函数名也代表了一个地址
+//
+//	int ret = (*pf)(3, 5);//此处加不加解引用* 都是一样的效果，
+//	//int ret = pf(3, 5);
+//	//int ret = (*Add)(3, 5);
+//	//int ret = Add(3,5);
+//
+//	printf("%d\n", ret);
+//
+//
+//	return 0;
+//}
+
+
+
+
+//调用0地址处的函数
+//(*(void(*)())0)();
+//该函数无参，且返回类型是void
+
+
+
+
 
 #include<stdio.h>
 int main()
 {
-	int arr[10][10] = { 0 };
-	for (int i = 0; i < 10; i++)
-	{
-		for (int j = 0; j <= i; j++)
-		{
-			if (j == 0)
-			{
-				arr[i][j] = 1;
-			}
-			if (j == i)
-			{
-				arr[i][j] = 1;
-			}
-			if (j >= 1 && i >= 2)
-			{
-				arr[i][j] = arr[i - 1][j] + arr[i - 1][j - 1];
-			}
-		}
-	}
-	for (int i = 0; i < 10; i++)
-	{
-		for (int j = 0; j <= i; j++)
-		{
-			printf("%d ", arr[i][j]);
-		}
-		printf("\n");
-	}
+	
 	return 0;
 }
