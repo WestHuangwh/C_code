@@ -160,29 +160,64 @@
 //}
 
 
+////设计一个函数来进行倒置字符串
+//#include<stdio.h>
+//#include<string.h>
+//void reverse(char arr1[], int len)
+//{
+//	char* ch = arr1;
+//	char* pch = arr1 + len - 1;
+//	while (ch < pch)
+//	{
+//		char tmp = *(pch);
+//		*(pch) = *(ch);
+//		*(ch) = tmp;
+//		ch++;
+//		pch--;
+//		
+//	}
+//	
+//}
+//int main()
+//{
+//	char arr[] =  "abcdef" ;
+//	int len = strlen(arr);
+//	reverse(arr, len);
+//	printf("%s\n", arr);
+//	return 0;
+//}
+
+
 
 #include<stdio.h>
-#include<string.h>
-void reverse(char arr1[], int sz)
-{
-	char* ch = arr1;
-	char* pch = arr1 + sz - 1;
-	while (ch < pch)
-	{
-		char tmp = *(pch);
-		*(pch) = *(ch);
-		*(ch) = tmp;
-		ch++;
-		pch--;
-		
-	}
-	
-}
 int main()
 {
-	char arr[] =  "abcdef" ;
-	int sz = strlen(arr);
-	reverse(arr, sz);
-	printf("%s\n", arr);
+	int arr[10][10] = { 0 };
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j <= i; j++)
+		{
+			if (j == 0)
+			{
+				arr[i][j] = 1;
+			}
+			if (j == i)
+			{
+				arr[i][j] = 1;
+			}
+			if (j >= 1 && i >= 2)
+			{
+				arr[i][j] = arr[i - 1][j] + arr[i - 1][j - 1];
+			}
+		}
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j <= i; j++)
+		{
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
 	return 0;
 }
