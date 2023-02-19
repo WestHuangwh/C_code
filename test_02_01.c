@@ -286,13 +286,15 @@
 
 
 
-
 //调用0地址处的函数
 //(*(void(*)())0)();
-//该函数无参，且返回类型是void
+//该函数无参，且返回类型是void,把零强制类型转换为函数指针类型
 
 
 
+
+
+//利用函数指针数组制作一个加减乘除的简易计算器
 #include<stdio.h>
 void menu()
 {
@@ -317,46 +319,41 @@ int Div(int x, int y)
 {
 	return x / y;
 }
+//int (*pf1)(int, int) = Add;//指向Add的函数指针
+//int (*pf2)(int, int) = Sub;//指向Sub的函数指针
+//int (*pfArr[2])(int, int) = { Add,Sub };//pfArr就是一个函数指针数组
+
 int main()
 {
 	int input;
 	//计算器，计算整形变量的加减乘除
-	do
-	{
-		menu();
+	do {
+		menu();//打印菜单
+		//这是一个函数指针数组，存储着加减乘除函数的四个函数指针
+		int (*pfArr[5])(int, int) = { NULL, Add,Sub,Mul,Div };
+
 		int x = 0;
 		int  y = 0;
-		int ret = 0;
+		int ret = 0;//ret放入计算的结果
 		printf("请选择:>");
 		scanf("%d", &input);
-		int (*pfArr[4])(int, int) = { Add,Sub,Mul,Div };//这是一个函数指针数组，存储着加减乘除函数的四个函数指针
-		switch (input)
+		if (input >= 1 && input <= 4)
 		{
-		case 1:
-			Add(x, y);
-
-			break;
-		case 2:
-			Sub(x, y);
-			break;
-		case 3:
-			Mul(x, y);
-			break;
-		case 4:
-			Div(x, y);
-			break;
-		case 0:
-			printf("退出程序！！");
-			break;
-		default:
-			printf("输入错误，请重新输入");
-			break;
+			printf("请输入两个操作数:>");
+			scanf("%d %d", &x, &y);
+			ret = (pfArr[input])(x, y);
+			printf("ret = %d\n", ret);
 		}
-
+		else if (input == 0)
+		{
+			printf("退出程序!");
+		}
+		else 
+		{
+			printf("选择错误，请重新选择\n");
+		}
 	} while (input);
-	int (*pf1)(int, int) = Add;
-	int (*pf2)(int, int) = Sub;
-	int (*pfArr[2])(int, int) = {Add,Sub};//pfArr就是一个函数指针数组
+	
 	return 0;
 }
 
