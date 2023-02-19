@@ -293,11 +293,70 @@
 
 
 
-
-
 #include<stdio.h>
+void menu()
+{
+	printf("*******1.Add     2.Snb**********\n");
+	printf("******3.Mul     4.Div   ********\n");
+	printf("*******     0.exit      ********\n");
+	printf("********************************\n");
+}
+int Add(int x, int y)
+{
+	return x + y;
+}
+int Sub(int x, int y)
+{
+	return x - y;
+}
+int Mul(int x, int y)
+{
+	return x * y;
+}
+int Div(int x, int y)
+{
+	return x / y;
+}
 int main()
 {
+	int input;
+	//计算器，计算整形变量的加减乘除
+	do
+	{
+		menu();
+		int x = 0;
+		int  y = 0;
+		int ret = 0;
+		printf("请选择:>");
+		scanf("%d", &input);
+		int (*pfArr[4])(int, int) = { Add,Sub,Mul,Div };//这是一个函数指针数组，存储着加减乘除函数的四个函数指针
+		switch (input)
+		{
+		case 1:
+			Add(x, y);
 
+			break;
+		case 2:
+			Sub(x, y);
+			break;
+		case 3:
+			Mul(x, y);
+			break;
+		case 4:
+			Div(x, y);
+			break;
+		case 0:
+			printf("退出程序！！");
+			break;
+		default:
+			printf("输入错误，请重新输入");
+			break;
+		}
+
+	} while (input);
+	int (*pf1)(int, int) = Add;
+	int (*pf2)(int, int) = Sub;
+	int (*pfArr[2])(int, int) = {Add,Sub};//pfArr就是一个函数指针数组
 	return 0;
 }
+
