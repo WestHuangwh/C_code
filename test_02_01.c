@@ -294,66 +294,99 @@
 
 
 
-//利用函数指针数组制作一个加减乘除的简易计算器
-#include<stdio.h>
-void menu()
-{
-	printf("*******1.Add     2.Snb**********\n");
-	printf("******3.Mul     4.Div   ********\n");
-	printf("*******     0.exit      ********\n");
-	printf("********************************\n");
-}
-int Add(int x, int y)
-{
-	return x + y;
-}
-int Sub(int x, int y)
-{
-	return x - y;
-}
-int Mul(int x, int y)
-{
-	return x * y;
-}
-int Div(int x, int y)
-{
-	return x / y;
-}
-//int (*pf1)(int, int) = Add;//指向Add的函数指针
-//int (*pf2)(int, int) = Sub;//指向Sub的函数指针
-//int (*pfArr[2])(int, int) = { Add,Sub };//pfArr就是一个函数指针数组
+////利用函数指针数组制作一个加减乘除的简易计算器
+//#include<stdio.h>
+////简易菜单
+//void menu()
+//{
+//	printf("*******1.Add     2.Snb**********\n");
+//	printf("******3.Mul     4.Div   ********\n");
+//	printf("*******     0.exit      ********\n");
+//	printf("********************************\n");
+//}
+////加法函数
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+////减法函数
+//int Sub(int x, int y)
+//{
+//	return x - y;
+//}
+////乘法函数
+//int Mul(int x, int y)
+//{
+//	return x * y;
+//}
+////除法函数
+//int Div(int x, int y)
+//{
+//	return x / y;
+//}
+////int (*pf1)(int, int) = Add;//指向Add的函数指针
+////int (*pf2)(int, int) = Sub;//指向Sub的函数指针
+////int (*pfArr[2])(int, int) = { Add,Sub };//pfArr就是一个函数指针数组
+//
+//int main()
+//{
+//	int input;
+//	//计算器，计算整形变量的加减乘除
+//	do {
+//		menu();//打印菜单
+//		//这是一个函数指针数组，存储着加减乘除函数的四个函数指针
+//		//转移表 - 《C和指针》里有提到此概念
+//		int (*pfArr[5])(int, int) = { NULL, Add,Sub,Mul,Div };
+//
+//		int x = 0;
+//		int  y = 0;
+//		int ret = 0;//ret放入计算的结果
+//		printf("请选择:>");
+//		scanf("%d", &input);
+//		if (input >= 1 && input <= 4)
+//		{
+//			printf("请输入两个操作数:>");
+//			scanf("%d %d", &x, &y);
+//			ret = (pfArr[input])(x, y);
+//			printf("ret = %d\n", ret);
+//		}
+//		else if (input == 0)
+//		{
+//			printf("退出程序!");
+//		}
+//		else 
+//		{
+//			printf("选择错误，请重新选择\n");
+//		}
+//	} while (input);
+//	
+//	return 0;
+//}
 
+
+
+////快速排序函数
+//void qsort(void* base,//base中存放的是待排序数组中第一个对象的地址
+//	size_t num,//排序数据元素的个数
+//	size_t size,//排序数据中一个元素的大小，单位是字节
+//	int(*cmp_int)(const void* e1, const void* e2)
+//);
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void cmp_int(const void* e1, const void* e2)
+{
+	return *(int*) e1 - *(int*)e2;
+}
 int main()
 {
-	int input;
-	//计算器，计算整形变量的加减乘除
-	do {
-		menu();//打印菜单
-		//这是一个函数指针数组，存储着加减乘除函数的四个函数指针
-		int (*pfArr[5])(int, int) = { NULL, Add,Sub,Mul,Div };
-
-		int x = 0;
-		int  y = 0;
-		int ret = 0;//ret放入计算的结果
-		printf("请选择:>");
-		scanf("%d", &input);
-		if (input >= 1 && input <= 4)
-		{
-			printf("请输入两个操作数:>");
-			scanf("%d %d", &x, &y);
-			ret = (pfArr[input])(x, y);
-			printf("ret = %d\n", ret);
-		}
-		else if (input == 0)
-		{
-			printf("退出程序!");
-		}
-		else 
-		{
-			printf("选择错误，请重新选择\n");
-		}
-	} while (input);
-	
+	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	//排序
+	qsort(arr,sz,sizeof(arr[0]),cmp_int );
+	//打印
+	printf("")
 	return 0;
 }
-
