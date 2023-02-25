@@ -373,20 +373,24 @@
 //);
 
 
-#include<stdio.h>
-#include<stdlib.h>
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//void cmp_int(const void* e1, const void* e2)
+//{
+//	return *(int*) e1 - *(int*)e2;
+//}
+//int main()
+//{
+//	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	//≈≈–Ú
+//	qsort(arr,sz,sizeof(arr[0]),cmp_int );
+//	//¥Ú”°
+//	printf("");
+//	return 0;
+//}
 
-void cmp_int(const void* e1, const void* e2)
-{
-	return *(int*) e1 - *(int*)e2;
-}
-int main()
-{
-	int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	//≈≈–Ú
-	qsort(arr,sz,sizeof(arr[0]),cmp_int );
-	//¥Ú”°
-	printf("")
-	return 0;
-}
+
+
+#
