@@ -392,27 +392,58 @@
 //}
 
 
+
 //计算n 的阶乘
+//#include<stdio.h>
+//
+//int num(int n)//函数定义写在main函数前面，不用声明
+//{
+//	int i;
+//	int face = 1;
+//	for (i = 1; i <= n; i++)
+//	{
+//		face *= i;
+//
+//	}
+//	return face;
+//}
+//
+//int main(void)
+//{
+//	int input;
+//	printf("请输入n的值:>");
+//	scanf("%d", &input);
+//	printf("%d", num(input));
+//
+//	return 0;
+//}
+
+
+
+//内存操作函数
+//memcpy - 内存拷贝
+
 #include<stdio.h>
-
-int num(int n)//函数定义写在main函数前面，不用声明
+#include<assert.h>//为断言的头文件
+void* my_memcpy(void* dest, const void* src, size_t num)
 {
-	int i;
-	int face = 1;
-	for (i = 1; i <= n; i++)
+	assert(dest && src != NULL);//断言两个指针不是空指针
+	void* ret = dest;
+	while (num--)
 	{
-		face *= i;
-
+		*(char*)dest = *(char*)src;
+		dest = (char*)dest + 1;
+		src = (char*)src + 1;
 	}
-	return face;
+	return ret;
 }
-
 int main(void)
 {
-	int input;
-	printf("请输入n的值:>");
-	scanf("%d", &input);
-	printf("%d", num(input));
+	int arr1[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int arr2[10] = { 0 };
+
+	my_memcpy(arr2, arr1, 20);
+
 
 	return 0;
 }
