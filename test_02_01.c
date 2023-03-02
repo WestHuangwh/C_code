@@ -371,7 +371,7 @@
 //	size_t size,//排序数据中一个元素的大小，单位是字节
 //	int(*cmp_int)(const void* e1, const void* e2)
 //);
-
+//
 //
 //#include<stdio.h>
 //#include<stdlib.h>
@@ -392,11 +392,27 @@
 //}
 
 
-
-
+//计算n 的阶乘
 #include<stdio.h>
+
+int num(int n)//函数定义写在main函数前面，不用声明
+{
+	int i;
+	int face = 1;
+	for (i = 1; i <= n; i++)
+	{
+		face *= i;
+
+	}
+	return face;
+}
+
 int main(void)
 {
-	
+	int input;
+	printf("请输入n的值:>");
+	scanf("%d", &input);
+	printf("%d", num(input));
+
 	return 0;
 }
