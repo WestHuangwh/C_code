@@ -445,5 +445,6 @@ int main(void)
 	my_memcpy(arr2, arr1, 20);
 
 
-	return 0;
 }
+
+
