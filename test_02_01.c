@@ -420,31 +420,44 @@
 
 
 
-//内存操作函数
-//memcpy - 内存拷贝
+////内存操作函数
+////memcpy - 内存拷贝
+//
+//#include<stdio.h>
+//#include<assert.h>//为断言的头文件
+//void* my_memcpy(void* dest, const void* src, size_t num)
+//{
+//	assert(dest && src != NULL);//断言两个指针不是空指针
+//	void* ret = dest;
+//	while (num--)
+//	{
+//		*(char*)dest = *(char*)src;
+//		dest = (char*)dest + 1;
+//		src = (char*)src + 1;
+//	}
+//	return ret;
+//}
+//int main(void)
+//{
+//	int arr1[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int arr2[10] = { 0 };
+//
+//	my_memcpy(arr2, arr1, 50);
+//
+//
+//}
+
 
 #include<stdio.h>
-#include<assert.h>//为断言的头文件
-void* my_memcpy(void* dest, const void* src, size_t num)
+int * my_memcpy(int *str, int* left, int sz)
 {
-	assert(dest && src != NULL);//断言两个指针不是空指针
-	void* ret = dest;
-	while (num--)
-	{
-		*(char*)dest = *(char*)src;
-		dest = (char*)dest + 1;
-		src = (char*)src + 1;
-	}
-	return ret;
+	while()
 }
 int main(void)
 {
-	int arr1[10] = { 1,2,3,4,5,6,7,8,9,10 };
-	int arr2[10] = { 0 };
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int arr2[20] = { 2,4,6,8,10 };
+	my_memcpy(arr, arr2, 20);
 
-	my_memcpy(arr2, arr1, 20);
-
-
+	return 0;
 }
-
-
