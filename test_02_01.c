@@ -451,7 +451,11 @@
 #include<stdio.h>
 int * my_memcpy(int *str, int* left, int sz)
 {
-	while()
+	while (*str)
+	{
+		str++;
+		left--;
+	}
 }
 int main(void)
 {
