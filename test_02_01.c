@@ -453,8 +453,16 @@ int * my_memcpy(int *str, int* left, int sz)
 {
 	while (*str)
 	{
+		int num = *left;
+		*left = *str;
+		*str = num;
 		str++;
 		left--;
+	}
+	for (int i = 0; i < left - 1; i++)
+	{
+		printf("%d", *left);
+
 	}
 }
 int main(void)
@@ -462,6 +470,7 @@ int main(void)
 	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
 	int arr2[20] = { 2,4,6,8,10 };
 	my_memcpy(arr, arr2, 20);
+	
 
 	return 0;
 }
