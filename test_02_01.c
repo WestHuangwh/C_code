@@ -479,14 +479,12 @@
 #include<stdio.h>
 int max(int*arr,int sz)
 {
-	int* p = arr;
 	int n = *arr;
-	while (*p)
+	for (int i = 0; i < sz; i++)
 	{
-		p++;
-		if (*p > n)
+		if (*(arr+i) > n)
 		{
-			n = *p;
+			n = *(arr + i);
 		}
 	}
 	return n;
