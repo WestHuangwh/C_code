@@ -448,29 +448,56 @@
 //}
 
 
-#include<stdio.h>
-int * my_memcpy(int *str, int* left, int sz)
-{
-	while (*str)
-	{
-		int num = *left;
-		*left = *str;
-		*str = num;
-		str++;
-		left--;
-	}
-	for (int i = 0; i < left - 1; i++)
-	{
-		printf("%d", *left);
+//#include<stdio.h>
+//int * my_memcpy(int *str, int* left, int sz)
+//{
+//	while (*str)
+//	{
+//		int num = *left;
+//		*left = *str;
+//		*str = num;
+//		str++;
+//		left--;
+//	}
+//	for (int i = 0; i < left - 1; i++)
+//	{
+//		printf("%d", *left);
+//
+//	}
+//}
+//int main(void)
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int arr2[20] = { 2,4,6,8,10 };
+//	my_memcpy(arr, arr2, 20);
+//	
+//
+//	return 0;
+//}
 
+
+#include<stdio.h>
+int max(int*arr,int sz)
+{
+	int* p = arr;
+	int n = *arr;
+	while (*p)
+	{
+		p++;
+		if (*p > n)
+		{
+			n = *p;
+		}
 	}
+	return n;
 }
 int main(void)
 {
-	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int arr2[20] = { 2,4,6,8,10 };
-	my_memcpy(arr, arr2, 20);
-	
+	int arr[10] = { 6,5,4,3,2,1,8,7,9,10 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int ret = max(arr,sz);
+	printf("%d ", ret);
 
+	
 	return 0;
 }
