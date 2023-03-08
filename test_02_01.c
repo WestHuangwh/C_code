@@ -476,26 +476,26 @@
 //}
 
 
-#include<stdio.h>
-int max(int*arr,int sz)
-{
-	int n = *arr;
-	for (int i = 0; i < sz; i++)
-	{
-		if (*(arr+i) > n)
-		{
-			n = *(arr + i);
-		}
-	}
-	return n;
-}
-int main(void)
-{
-	int arr[10] = { 6,5,4,3,2,1,8,7,9,10 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	int ret = max(arr,sz);
-	printf("%d ", ret);
-
-	
-	return 0;
-}
+//#include<stdio.h>
+//int max(int*arr,int sz)
+//{
+//	int n = *arr;
+//	for (int i = 0; i < sz; i++)
+//	{
+//		if (*(arr+i) > n)
+//		{
+//			n = *(arr + i);
+//		}
+//	}
+//	return n;
+//}
+//int main(void)
+//{
+//	int arr[10] = { 6,5,4,3,2,1,8,7,9,10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int ret = max(arr,sz);
+//	printf("%d ", ret);
+//
+//	
+//	return 0;
+//}
