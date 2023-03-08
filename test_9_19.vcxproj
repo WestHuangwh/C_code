@@ -131,6 +131,7 @@
     <ClCompile Include="test_01_15.c" />
     <ClCompile Include="test_01_25.c" />
     <ClCompile Include="test_02_01.c" />
+    <ClCompile Include="test_03_08.c" />
     <ClCompile Include="test_9_19.c" />
     <ClCompile Include="test_12_26.c" />
   </ItemGroup>
