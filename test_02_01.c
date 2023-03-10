@@ -509,17 +509,3 @@
 
 
 
-#include<stdio.h>
-struct S
-{
-	int age;
-	char name[20];
-	double i;
-
-}s1,s2;
-
-int main(void)
-{
-	
-	return 0;
-}
