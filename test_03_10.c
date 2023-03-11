@@ -42,10 +42,40 @@
 //	return 0;
 //}
 
+//
+//#include<stdio.h>
+//int main(void)
+//{
+//
+//	return 0;
+//}
+
+
 
 #include<stdio.h>
 int main(void)
 {
+	int input = 0;
+	printf("请输入一个数字:>");
+	scanf("%d", &input);
 
+	int i = 0;
+	for (i = 0; i < input; i++)
+	{
+		for (int j = 1; j <= i + 1; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	for (int i1 = 0; i1 < input - 1; i1++)
+	{
+		for (int j1 = 1; j1 <= input - i1 - 1; j1++)
+		{
+			printf("*");
+
+		}
+		printf("\n");
+	}
 	return 0;
 }
