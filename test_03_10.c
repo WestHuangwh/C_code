@@ -47,7 +47,12 @@
 #include<stdio.h>
 int main(void)
 {
-
-
+	printf("Hello world");
+	printf("Ëæ±ã\n");
+	for (int i = 0; i < 100; i++)
+	{
+		printf("ÄãºÃ£¬ÊÀ½ç");
+		printf("\n");
+	}
 	return 0;
 }
