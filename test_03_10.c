@@ -43,10 +43,25 @@
 //}
 
 
+
 #include<stdio.h>
+
+默认对齐数是8
+
+#pragma pack(2)//把默认对齐数改为2
+struct S
+{
+	char c1;//放在零偏移量 的地方
+	1-3
+	int i;//4-7
+	char c2;//8
+	9-11
+
+};
+#pragma pack()//取消设置的默认的对齐数，把默认对齐数改回为8
 int main(void)
 {
-	
+	printf("%d\n", sizeof(struct S));
 
 	return 0;
 }
