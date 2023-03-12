@@ -43,25 +43,45 @@
 //}
 
 
+////结构在对齐方式不合适的时候，我们可以修改默认对齐数
+//#include<stdio.h>
+//
+////默认对齐数是8
+//
+//#pragma pack(2)//把默认对齐数改为2
+//struct S
+//{
+//	char c1;//放在零偏移量 的地方
+//	//1-3
+//	int i;//4-7
+//	char c2;//8
+//	//9-11
+//
+//};
+//#pragma pack()//取消设置的默认的对齐数，把默认对齐数改回为8
+//int main(void)
+//{
+//	printf("%d\n", sizeof(struct S));
+//
+//	return 0;
+//}
 
+
+
+//offsetof
 #include<stdio.h>
-
-默认对齐数是8
-
-#pragma pack(2)//把默认对齐数改为2
+#include<stddef.h>
 struct S
 {
-	char c1;//放在零偏移量 的地方
-	1-3
-	int i;//4-7
-	char c2;//8
-	9-11
-
+	char c1;
+	int i;
+	char c2;
 };
-#pragma pack()//取消设置的默认的对齐数，把默认对齐数改回为8
+
 int main(void)
 {
-	printf("%d\n", sizeof(struct S));
-
+	printf("%d\n", offsetof(struct S, c1));
+	printf("%d\n", offsetof(struct S, i));
+	printf("%d\n", offsetof(struct S, c2));
 	return 0;
 }
