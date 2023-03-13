@@ -68,20 +68,29 @@
 
 
 
-//offsetof
-#include<stdio.h>
-#include<stddef.h>
-struct S
-{
-	char c1;
-	int i;
-	char c2;
-};
+////offsetof//计算成员变量的偏移量
+//#include<stdio.h>
+//#include<stddef.h>
+//struct S
+//{
+//	char c1;
+//	int i;
+//	char c2;
+//};
+//
+//int main(void)
+//{
+//	printf("%d\n", offsetof(struct S, c1));//计算c1的偏移量
+//	printf("%d\n", offsetof(struct S, i));//计算i的偏移量
+//	printf("%d\n", offsetof(struct S, c2));//计算c2的偏移量
+//	return 0;
+//}
 
+
+
+#include<stdio.h>
 int main(void)
 {
-	printf("%d\n", offsetof(struct S, c1));
-	printf("%d\n", offsetof(struct S, i));
-	printf("%d\n", offsetof(struct S, c2));
+
 	return 0;
 }
