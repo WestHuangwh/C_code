@@ -93,3 +93,11 @@
 //calloc
 //free用来释放空间
 //realloc
+
+
+#include<stdio.h>
+int main(void)
+{
+
+	return 0;
+}
