@@ -95,9 +95,53 @@
 //realloc
 
 
+
+
+
+
+//动态内存开辟常见错误
+
+////1.错误：对NULL指针的解引用操作
+//#include<stdio.h>
+//int main(void)
+//{
+//	int* p = (int*)malloc(1000000000);
+//	//对malloc的返回值，做判断处理
+//	*p = 20;//如果p的值是NULL,就会有问题
+//	free(p);
+//
+//	return 0;
+//}
+
+
+//2.错误：对动态开辟空间的越界访问
 #include<stdio.h>
 int main(void)
 {
+	int* p = (int*)malloc(10 * sizeof(int));
+	if (p == NULL)
+	{
+		return 1;
+	}
+	//此处发生了越界访问
+	for (int i = 0; i < 40; i++)
+	{
+		*(p + i) = i;
 
+	}
+	free(p);
+	p = NULL;
 	return 0;
 }
+
+
+////3.错误：对非动态开辟空间使用free释放
+//#include<stdio.h>
+//int main(void)
+//{
+//	int a = 20;
+//	int* p = &a;
+//	free(p);
+//
+//	return 0;
+//}
