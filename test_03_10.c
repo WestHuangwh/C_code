@@ -292,6 +292,10 @@ int main(void)
 
 		}
 	}
+	if (i < 0)
+	{
+		arr[0] = m;
+	}
 	for (i = 0; i <n+1; i++)
 	{
 		printf("%d ", arr[i]);
