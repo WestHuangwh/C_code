@@ -243,3 +243,24 @@
 //	Test();
 //	return 0;
 //}
+
+
+//柔性数组
+#include<stdio.h>
+#include<stdlib.h>
+struct 
+{
+	int n;
+	int arr[];//大小是未知的
+
+
+};
+int main(void)
+{
+
+
+	return 0;
+}
+
+
+
