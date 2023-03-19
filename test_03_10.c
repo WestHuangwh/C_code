@@ -114,34 +114,132 @@
 //}
 
 
-//2.错误：对动态开辟空间的越界访问
-#include<stdio.h>
-int main(void)
-{
-	int* p = (int*)malloc(10 * sizeof(int));
-	if (p == NULL)
-	{
-		return 1;
-	}
-	//此处发生了越界访问
-	for (int i = 0; i < 40; i++)
-	{
-		*(p + i) = i;
-
-	}
-	free(p);
-	p = NULL;
-	return 0;
-}
+////2.错误：对动态开辟空间的越界访问
+//#include<stdio.h>
+//int main(void)
+//{
+//	int* p = (int*)malloc(10 * sizeof(int));
+//	if (p == NULL)
+//	{
+//		return 1;
+//	}
+//	//此处发生了越界访问
+//	for (int i = 0; i < 40; i++)
+//	{
+//		*(p + i) = i;
+//
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
 
 
 ////3.错误：对非动态开辟空间使用free释放
 //#include<stdio.h>
 //int main(void)
 //{
-//	int a = 20;
-//	int* p = &a;
+//	int arr[10] = {0};//在栈区上开辟的空间，不能用free来释放
+//	int* p = arr;
+//	free(p);//不能释放非动态开辟的空间
+//	p = NULL;
+//
+//	return 0;
+//}
+
+
+////4.错误：使用free释放动态内存的一部分
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main(void)
+//{
+//	int* p = (int*)malloc(10 * sizeof(int));
+//	if (p == NULL)
+//	{
+//		return 1;
+//	}
+//	for (int i = 0; i < 5; i++)
+//	{
+//		*(p + i) = i;
+//
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
+
+////5.错误：对同一块内存多次释放
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main(void)
+//{
+//	int* p = (int*)malloc(100);
+//	//使用
+//	//释放
+//	free(p);
+//	p = NULL;
+//
+//	//释放
 //	free(p);
 //
 //	return 0;
 //}
+
+
+////6.错误：动态开辟内存忘记释放（可能形成比较严重的内存泄漏）
+//#include<stdio.h>
+//#include<stdlib.h>
+//void test()
+//{
+//	int* p = (int*)malloc(100);
+//	if (p == NULL)
+//	{
+//		return ;
+//	}
+//	//使用
+//
+//
+//}
+//int main(void)
+//{
+//	test();
+//	return 0;
+//}
+
+
+
+//动态开辟的空间，有两种回收方式
+//1.主动用free释放
+//2.程序结束
+
+
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+char* GetMemory(char* p)
+{
+	p = (char*)malloc(100);//在堆区上开辟一个100个字节的地址
+	return p;
+
+}
+void Test(void)
+{
+	char* str = NULL;
+	str = GetMemory(str);
+	strcpy(str, "hello world");
+	printf(str);//这里并没错，其本质是传入一个首元素的地址，
+	            //如printf("hello world");就是传入字符串的首地址
+	            //char*p = "hello world";
+	free(str);
+	str = NULL;
+
+}
+int main(void)
+{
+	Test();
+	return 0;
+}
