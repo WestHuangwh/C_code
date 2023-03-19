@@ -217,29 +217,29 @@
 
 
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-char* GetMemory(char* p)
-{
-	p = (char*)malloc(100);//在堆区上开辟一个100个字节的地址
-	return p;
-
-}
-void Test(void)
-{
-	char* str = NULL;
-	str = GetMemory(str);
-	strcpy(str, "hello world");
-	printf(str);//这里并没错，其本质是传入一个首元素的地址，
-	            //如printf("hello world");就是传入字符串的首地址
-	            //char*p = "hello world";
-	free(str);
-	str = NULL;
-
-}
-int main(void)
-{
-	Test();
-	return 0;
-}
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<string.h>
+//char* GetMemory(char* p)
+//{
+//	p = (char*)malloc(100);//在堆区上开辟一个100个字节的地址
+//	return p;
+//
+//}
+//void Test(void)
+//{
+//	char* str = NULL;
+//	str = GetMemory(str);
+//	strcpy(str, "hello world");
+//	printf(str);//这里并没错，其本质是传入一个首元素的地址，
+//	            //如printf("hello world");就是传入字符串的首地址
+//	            //char*p = "hello world";
+//	free(str);
+//	str = NULL;
+//
+//}
+//int main(void)
+//{
+//	Test();
+//	return 0;
+//}
