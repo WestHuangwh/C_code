@@ -268,17 +268,17 @@
 #include<stdio.h>
 int main(void)
 {
+	int arr[51] = { 0 };
 	int n = 0;
 	scanf("%d", &n);
-	int arr[] = { 0 };
 	int i = 0;
 	for (i = 0; i < n; i++)
 	{
-		scanf("%d", arr[i]);
+		scanf("%d", &arr[i]);
 	}
 	int m = 0;
 	scanf("%d", &m);
-	for (i = n - 1; i < 0; i--)
+	for (i = n - 1; i >= 0; i--)
 	{
 		if (arr[i] > m)
 		{
@@ -292,9 +292,9 @@ int main(void)
 
 		}
 	}
-	for (i = 0; i <= n; i++)
+	for (i = 0; i <n+1; i++)
 	{
-		printf("%d", arr[i]);
+		printf("%d ", arr[i]);
 	}
 	return 0;
 }
