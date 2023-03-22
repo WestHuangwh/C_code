@@ -24,6 +24,6 @@
 #include<stdio.h>
 int main(void)
 {
-	printf("By world\n");
+	printf("By world!\n");
 	return 0;
 }
