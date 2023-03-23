@@ -20,11 +20,20 @@
 //	return 0;
 //}
 
-
 #include<stdio.h>
+struct S
+{
+	char arr[10];
+	int a;
+	double b;
+
+}sb;
+
 int main(void)
 {
+	sb.a = 10;
+	sb->b = 3.555;/*
+	FILE* pf = fopen("test.dat", 'w');*/
 
-	printf("Hello world\n");
 	return 0;
 }
