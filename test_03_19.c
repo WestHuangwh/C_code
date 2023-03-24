@@ -100,30 +100,92 @@
 
 
 
+//#include<stdio.h>
+//int main(void)
+//{
+//	int a,b,c;
+//	int max = 0;
+//	scanf("%d %d %d", &a, &b, &c);
+//	if (a < b )
+//	{
+//		max = a;
+//		a = b;
+//		b = max;
+//	}
+//	if (a < c)
+//	{
+//		max = a;
+//		a = c;
+//		c = max;
+//	}
+//	if (b < c)
+//	{
+//		max = b;
+//		b = c;
+//		c = max;
+//	}
+//	printf("%d %d %d", a, b, c);
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//int main(void)
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d %d", &a, &b);
+//	int min = a < b ? a : b;
+//	for (int i = min; i>0; i++)
+//	{
+//		if (b % i == 0 && a % i == 0)
+//		{
+//			printf("%d\n", i);
+//		}
+//	}
+//	return 0;
+//}
+
+
+//
+//#include<stdio.h>
+//int main(void)
+//{
+//	int i = 0;
+//	int cout = 0;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		/*if(i % 10 == 9)
+//		{
+//			printf("%d ", i);
+//			cout++;
+//		}*/
+//		if (i / 10 ==9 || i % 10 == 9 )
+//		{
+//			printf("%d ", i);
+//			cout++;
+//		}
+//	}
+//	
+//	printf("\n%d\n", cout);
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
 int main(void)
 {
-	int a,b,c;
-	int max = 0;
-	scanf("%d %d %d", &a, &b, &c);
-	if (a < b )
+	int i = 0;
+	for (i = 1; i <= 9; i++)
 	{
-		max = a;
-		a = b;
-		b = max;
+		int j = 0;
+		for (j = 1; j <= i; j++)
+		{
+			printf("%d*%d=%d ", j, i, i * j);
+		}
+		printf("\n");
 	}
-	if (a < c)
-	{
-		max = a;
-		a = c;
-		c = max;
-	}
-	if (b < c)
-	{
-		max = b;
-		b = c;
-		c = max;
-	}
-	printf("%d %d %d", a, b, c);
 	return 0;
 }
