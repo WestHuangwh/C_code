@@ -16,33 +16,33 @@
 //}
 
 
-////求Sn=a+aa+aaa+aaaa+aaaaa的前5项之和，其中a是一个数字，
-////例如：2 + 22 + 222 + 2222 + 22222
-//#include<stdio.h>
-//
-//int main(void)
-//
-//{
-//
-//	int input = 0;
-//	int n = 0;
-//	scanf("%d %d",&input,&n);
-//
-//	int a = input;
-//	int i = 0;
-//	for (i = 0; i < n; i++)
-//
-//	{
-//
-//		input += input * 10 + a;
-//
-//	}
-//
-//	printf("%d\n", input);
-//
-//	return 0;
-//
-//}
+//求Sn=a+aa+aaa+aaaa+aaaaa的前5项之和，其中a是一个数字，
+//例如：2 + 22 + 222 + 2222 + 22222
+#include<stdio.h>
+
+int main(void)
+
+{
+
+	int input = 0;
+	int n = 0;
+	scanf("%d %d",&input,&n);
+
+	int a = input;
+	int i = 0;
+	for (i = 0; i < n; i++)
+
+	{
+
+		input += input * 10 + a;
+
+	}
+
+	printf("%d\n", input);
+
+	return 0;
+
+}
 
 
 ////求出0～100000之间的所有“水仙花数”并输出。
@@ -58,40 +58,40 @@
 //}
 
 
-#include<stdio.h>
-int main(void)
-{
-	int n = 0;
-	scanf("%d", &n);
-	int i = 0;
-	for (i = 0; i < n; i++)
-	{
-		int j = 0;
-		for (j =0; j<n-i-1; j++)
-		{
-			printf(" ");
-		}
-		//j = 0;
-		for (j = 0; j<2*i-1; j++)
-		{
-			printf("*");
-		}
-		printf("\n");
-	}
-	for (i = 0; i < n - 1; i++)
-	{
-		int j = 0;
-		for (j = 0; j <= i; j++)
-		{
-			printf(" ");
-
-		}
-		for (j = 0; j < 2 * (n - 1 - i) - 1; j++)
-		{
-			printf("*");
-
-		}
-		printf("\n");
-	}
-	return 0;
-}
+//#include<stdio.h>
+//int main(void)
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int i = 0;
+//	//上部分
+//	for (i = 0; i < n; i++)
+//	{
+//		int j = 0;
+//		for (j =0; j<n-i-1; j++)
+//		{
+//			printf(" ");
+//		}
+//		//j = 0;
+//		for (j = 0; j<2*i-1; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+	////下部分
+	//for (i = 0; i < n - 1; i++)
+	//{
+	//	int j = 0;
+	//	for (j = 0; j <i; j++)
+	//	{
+	//		printf(" ");
+	//	}
+	//	for (j = 0; j < 2 * (n - 1 - i) - 1; j++)
+	//	{
+	//		printf("*");
+	//	}
+	//	printf("\n");
+	//}
+//	return 0;
+//}
