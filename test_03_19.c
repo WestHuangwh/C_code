@@ -106,28 +106,24 @@ int main(void)
 	int a,b,c;
 	int max = 0;
 	scanf("%d %d %d", &a, &b, &c);
-	if (a > b )
+	if (a < b )
 	{
 		max = a;
 		a = b;
-		b = c;
+		b = max;
 	}
-	if (a > c)
+	if (a < c)
 	{
 		max = a;
 		a = c;
-		c = b;
+		c = max;
 	}
-	if (b > c)
+	if (b < c)
 	{
 		max = b;
 		b = c;
-		c = a;
+		c = max;
 	}
-	
-
 	printf("%d %d %d", a, b, c);
-
-
 	return 0;
 }
