@@ -1,39 +1,48 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
-
+////用指针打印一个整型数组，不能用下标
 //#include<stdio.h>
 //int main(void)
 //{
-//	//打开文件
-//	FILE* pf = fopen("test.dat", "w");
-//	if (pf == NULL)//对返回的指针进行判断
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int* p = arr;
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
 //	{
-//		perror("fopen");
-//		return 1;
+//		printf("%d ", *(p + i));
 //	}
-//	//写文件
-//
-//
-//	//关闭文件
-//	fclose(pf);
-//	pf = NULL;//置空指针，防止其变为空指针
 //	return 0;
 //}
 
-#include<stdio.h>
-struct S
-{
-	char arr[10];
-	int a;
-	double b;
 
-}sb;
+
+
+//求Sn=a+aa+aaa+aaaa+aaaaa的前5项之和，其中a是一个数字，
+//例如：2 + 22 + 222 + 2222 + 22222
+#include<stdio.h>
 
 int main(void)
+
 {
-	sb.a = 10;
-	sb->b = 3.555;/*
-	FILE* pf = fopen("test.dat", 'w');*/
+
+	int input = 0;
+	int n = 0;
+	scanf("%d %d",&input,&n);
+
+	int a = input;
+	int i = 0;
+	for (i = 0; i < n; i++)
+
+	{
+
+		input += input * 10 + a;
+
+	}
+
+	printf("%d\n", input);
 
 	return 0;
+
 }
+
