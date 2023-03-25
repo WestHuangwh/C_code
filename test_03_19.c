@@ -488,25 +488,48 @@
 //}
 
 
+//#include<stdio.h>
+//int Sgin(int n, int k)
+//{
+//	if (k == 0)
+//	{
+//		return 1;
+//	}
+//
+//	if (k>=1)
+//	{
+//		return Sgin(n,k - 1) * n;
+//	}
+//}
+//int main(void)
+//{
+//	int n = 0;
+//	int k = 0;
+//	scanf("%d %d", &n, &k);
+//	int ret = Sgin(n, k);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+
 #include<stdio.h>
-int Sgin(int n, int k)
+int  Sad(int n)
 {
-	if (k == 0)
+	if (n < 3)
 	{
 		return 1;
 	}
-
-	if (k>=1)
+	else
 	{
-		return Sgin(n,k - 1) * n;
+		return Sad(n - 1) + Sad(n - 2);
 	}
 }
+
 int main(void)
 {
-	int n = 0;
-	int k = 0;
-	scanf("%d %d", &n, &k);
-	int ret = Sgin(n, k);
+	int input = 0;
+	scanf("%d", &input);
+	int ret = Sad(input);
 	printf("%d\n", ret);
 	return 0;
 }
