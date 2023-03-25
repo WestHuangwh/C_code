@@ -394,20 +394,46 @@
 
 
 
-//模拟实现strlen 函数
+////模拟实现strlen 函数
+//#include<stdio.h>
+//int my_strlen(char* ch)
+//{
+//	int cout = 0;
+//	while (*ch!=0)
+//	{
+//		if (*ch != 0)
+//		{
+//			ch++;
+//			cout++;
+//		}
+//	}
+//	return cout;
+//}
+//int main(void)
+//{
+//	char arr[] = "Hello";
+//	int ret = my_strlen(arr);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+
+
+//用递归模拟实现strlen函数
 #include<stdio.h>
 int my_strlen(char* ch)
 {
-	int cout = 0;
-	while (*ch!=0)
+	if (*ch == '\0')
 	{
-		if (*ch != 0)
-		{
-			ch++;
-			cout++;
-		}
+		return 0;
 	}
-	return cout;
+	else
+
+	{
+		return 1 + my_strlen(ch + 1);
+
+	}
+		
 }
 int main(void)
 {
