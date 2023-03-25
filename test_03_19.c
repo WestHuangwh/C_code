@@ -374,19 +374,45 @@
 //}
 
 
-//递归
+
+////递归
+//#include<stdio.h>
+//int Fac(int n)
+//{
+//	if (n <= 1)
+//		return 1;
+//	return Fac(n - 1) * n;
+//}
+//int main(void)
+//{
+//	int input = 0;
+//	scanf("%d", &input);
+//	int ret = Fac(input);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+
+
+//模拟实现strlen 函数
 #include<stdio.h>
-int Fac(int n)
+int my_strlen(char* ch)
 {
-	if (n <= 1)
-		return 1;
-	return Fac(n - 1) * n;
+	int cout = 0;
+	while (*ch!=0)
+	{
+		if (*ch != 0)
+		{
+			ch++;
+			cout++;
+		}
+	}
+	return cout;
 }
 int main(void)
 {
-	int input = 0;
-	scanf("%d", &input);
-	int ret = Fac(input);
+	char arr[] = "Hello";
+	int ret = my_strlen(arr);
 	printf("%d\n", ret);
 	return 0;
 }
