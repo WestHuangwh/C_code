@@ -256,39 +256,84 @@
 //}
 
 
+//
+//#include<stdio.h>
+//void Mul(int x)
+//{
+//	int i = 0;
+//	for (i = 1; i <= x; i++)
+//	{
+//		int j = 0;
+//		for (j = 1; j <= i; j++)
+//		{
+//			printf("%dx%d=%4d     ", j, i, j * i);
+//		}
+//		printf("\n");
+//	}
+//}
+//int main(void)
+//{
+//	int input = 0;
+//	scanf("%d", &input);
+//	Mul(input);
+//
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<math.h>
+//is_prim(int n)
+//{
+//	int j = 0;
+//	for (j = 2; j <= sqrt(n); j++)
+//	{
+//		if (n % j == 0)
+//		{
+//			return 0;
+//		}
+//	}
+//	return 1;
+//}
+//int main()
+//{
+//	int i = 0;
+//	for (i = 100; i <= 200; i++)
+//	{
+//		if (is_prim(i) == 1)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	return 0;
+//}
+
+
 
 #include<stdio.h>
+int IsYear(input)
+{
+	if (input % 4 == 0 && input % 400 != 0 || input % 400 == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
 int main(void)
 {
-
-	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	int k = 0;
-	printf("请输入您需要查找的数字:>");
-	scanf("%d", &k);
-	int left = 0;
-	int right = sz - 1;
-
-	while (left <= right) {
-
-		int mid = (left + right) / 2;
-
-		if (arr[mid] < k) {
-			left = mid + 1;
-		}
-		else if (arr[mid] > k) {
-			right = mid - 1;
-		}
-		else if (arr[mid] == k) {
-			printf("找到了，该元素下标是：%d\n", mid);
-			break;
-		}
+	int input = 0;
+	scanf("%d", &input);
+	int ret = IsYear(input);
+	if (ret)
+	{
+		printf("Yes\n");
 	}
-
-	if (left > right) {
-		printf("对不起，没有找到该元素\n");
+	else
+	{
+		printf("No\n");
 	}
-
 	return 0;
-
 }
