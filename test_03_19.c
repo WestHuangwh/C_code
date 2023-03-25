@@ -309,31 +309,65 @@
 
 
 
-#include<stdio.h>
-int IsYear(input)
-{
-	if (input % 4 == 0 && input % 400 != 0 || input % 400 == 0)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
-}
+//#include<stdio.h>
+//int IsYear(input)
+//{
+//	if (input % 4 == 0 && input % 400 != 0 || input % 400 == 0)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return 0;
+//	}
+//}
+//
+//int main(void)
+//{
+//	int input = 0;
+//	scanf("%d", &input);
+//	int ret = IsYear(input);
+//	if (ret)
+//	{
+//		printf("Yes\n");
+//	}
+//	else
+//	{
+//		printf("No\n");
+//	}
+//	return 0;
+//}
 
+
+//#include<stdio.h>
+//void Num(int n)
+//{
+//	if (n > 9)
+//		Num(n / 10);
+//	printf("%d ", n % 10);
+//}
+//
+//int main(void)
+//{
+//	int input = 0;
+//	scanf("%d", &input);
+//	Num(input);
+//	return 0;
+//}
+
+
+#include<stdio.h>
+//·Çµİ¹é
 int main(void)
 {
-	int input = 0;
-	scanf("%d", &input);
-	int ret = IsYear(input);
-	if (ret)
+	int i = 0;
+	int n = 0;
+	int num = 1;
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
 	{
-		printf("Yes\n");
+		num*= i;
 	}
-	else
-	{
-		printf("No\n");
-	}
+	printf("%d\n", num);
 	return 0;
 }
