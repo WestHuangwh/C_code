@@ -356,18 +356,37 @@
 //}
 
 
+
+//#include<stdio.h>
+////·ÇµÝ¹é
+//int main(void)
+//{
+//	int i = 0;
+//	int n = 0;
+//	int num = 1;
+//	scanf("%d", &n);
+//	for (i = 1; i <= n; i++)
+//	{
+//		num*= i;
+//	}
+//	printf("%d\n", num);
+//	return 0;
+//}
+
+
+//µÝ¹é
 #include<stdio.h>
-//·ÇµÝ¹é
+int Fac(int n)
+{
+	if (n <= 1)
+		return 1;
+	return Fac(n - 1) * n;
+}
 int main(void)
 {
-	int i = 0;
-	int n = 0;
-	int num = 1;
-	scanf("%d", &n);
-	for (i = 1; i <= n; i++)
-	{
-		num*= i;
-	}
-	printf("%d\n", num);
+	int input = 0;
+	scanf("%d", &input);
+	int ret = Fac(input);
+	printf("%d\n", ret);
 	return 0;
 }
