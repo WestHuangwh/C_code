@@ -512,24 +512,32 @@
 //}
 
 
-#include<stdio.h>
-int  Sad(int n)
-{
-	if (n < 3)
-	{
-		return 1;
-	}
-	else
-	{
-		return Sad(n - 1) + Sad(n - 2);
-	}
-}
+//#include<stdio.h>
+//int  Sad(int n)
+//{
+//	if (n < 3)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return Sad(n - 1) + Sad(n - 2);
+//	}
+//}
+//
+//int main(void)
+//{
+//	int input = 0;
+//	scanf("%d", &input);
+//	int ret = Sad(input);
+//	printf("%d\n", ret);
+//	return 0;
+//}
 
+
+#include<stdio.h>
 int main(void)
 {
-	int input = 0;
-	scanf("%d", &input);
-	int ret = Sad(input);
-	printf("%d\n", ret);
+
 	return 0;
 }
