@@ -418,27 +418,48 @@
 //}
 
 
+//
+////用递归模拟实现strlen函数
+//#include<stdio.h>
+//int my_strlen(char* ch)
+//{
+//	if (*ch == '\0')
+//	{
+//		return 0;
+//	}
+//	else
+//	{
+//		return 1 + my_strlen(ch + 1);
+//
+//	}
+//		
+//}
+//int main(void)
+//{
+//	char arr[] = "Hello";
+//	int ret = my_strlen(arr);
+//	printf("%d\n", ret);
+//	return 0;
+//}
 
-//用递归模拟实现strlen函数
+
 #include<stdio.h>
-int my_strlen(char* ch)
+void reverse_string(char* string)
 {
-	if (*ch == '\0')
+	if (*string == '\0')
 	{
 		return 0;
 	}
 	else
-
 	{
-		return 1 + my_strlen(ch + 1);
-
+		return reverse_string(string + 1);
 	}
-		
 }
 int main(void)
 {
-	char arr[] = "Hello";
-	int ret = my_strlen(arr);
-	printf("%d\n", ret);
+	char arr[] = "abcdef";
+	reverse_string(arr);
+	printf(arr);
+
 	return 0;
 }
