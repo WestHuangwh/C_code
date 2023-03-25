@@ -443,23 +443,46 @@
 //}
 
 
+//#include<stdio.h>
+//void reverse_string(char* arr)
+//{
+//	int len = strlen(arr);
+//	char tmp = *arr;
+//	*arr = *(arr + len - 1);
+//
+//	*(arr + len - 1) = '\0';
+//	if (strlen(arr + 1) >= 2)
+//		reverse_string(arr + 1);
+//
+//	*(arr + len - 1) = tmp;
+//}
+//int main(void)
+//{
+//	char arr[] = "abcdef";
+//	reverse_string(arr);
+//	printf(arr);
+//
+//	return 0;
+//}
+
+
 #include<stdio.h>
-void reverse_string(char* string)
+int DigitSum(int n)
 {
-	if (*string == '\0')
+	if (n < 10)
 	{
-		return 0;
+		return n;
 	}
 	else
 	{
-		return reverse_string(string + 1);
+		
+		return DigitSum(n / 10)+n%10;
 	}
 }
 int main(void)
 {
-	char arr[] = "abcdef";
-	reverse_string(arr);
-	printf(arr);
-
+	int n = 0;
+	scanf("%d", &n);
+	printf("%d\n",DigitSum(n));
 	return 0;
 }
