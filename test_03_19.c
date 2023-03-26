@@ -538,6 +538,24 @@
 #include<stdio.h>
 int main(void)
 {
+	int arr[] = { 5,6,4,1,2,3,7,8,9,10 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int left = 0;
+	int right = sz - 1;
+	for (int i = 0; i < sz; i++)
+	{
+		if (arr[left] > arr[i])
+		{
+			int tmp = arr[left];
+			arr[left] = arr[i];
+			arr[i] = tmp;
 
+		}
+		left++;
+	}
+	for (int i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
 	return 0;
 }
