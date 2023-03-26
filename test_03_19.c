@@ -571,19 +571,30 @@
 #include<stdio.h>
 #include<string.h>
 
+void Swap(int* x, int* y)
+{
+	int tmp = *x;
+	*x = *y;
+	*y = tmp;
+}
 int main(void)
 {
 	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
 	int arr1[] = { 10,9,8,7,6,5,4,3,2,1 };
-	int arr2[] = {0};
-	strcpy(arr, arr2);
-	strcpy(arr1, arr);
-	strcpy(arr2, arr1);
+	
 	int sz = sizeof(arr) / sizeof(arr[0]);
+	for (int i = 0; i < sz; i++)
+	{
+		Swap(&arr[i], &arr1[i]);
+	}
 	for (int i = 0; i < sz; i++)
 	{
 		printf("%d ", arr[i]);
 	}
-
+	printf("\n");
+	for (int i = 0; i < sz; i++)
+	{
+		printf("%d ", arr1[i]);
+	}
 	return 0;
 }
