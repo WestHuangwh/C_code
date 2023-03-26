@@ -535,23 +535,22 @@
 //}
 
 
+
 #include<stdio.h>
-int main(void)
+int mai(void)
 {
-	int arr[] = { 5,6,4,1,2,3,7,8,9,10 };
+	int arr[] = { 10,8,9,5,6,7,1,3,2,4 };
 	int sz = sizeof(arr) / sizeof(arr[0]);
 	int left = 0;
-	int right = sz - 1;
-	for (int i = 0; i < sz; i++)
+	while (left <= sz - 1)
 	{
-		if (arr[left] > arr[i])
+		if (arr[left] > arr[left + 1])
 		{
 			int tmp = arr[left];
-			arr[left] = arr[i];
-			arr[i] = tmp;
-
+			arr[left] = arr[left + 1];
+			arr[left + 1] = tmp;
+			left++;
 		}
-		left++;
 	}
 	for (int i = 0; i < sz; i++)
 	{
