@@ -536,32 +536,54 @@
 
 
 
+//#include<stdio.h>
+//void Sad(int arr[], int sz)
+//{
+//	
+//	for (int i = 0; i < sz-1; i++)
+//	{
+//		for (int j = 0; j < sz - i-1 ; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//			{
+//				int tmp = arr[j];
+//				arr[j] = arr[j + 1];
+//				arr[j + 1] = tmp;
+//			}
+//		}
+//	}
+//}
+//int main(void)
+//{
+//	int arr[] = { 0,8,9,5,6,7,1,3,2,4 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	Sad(arr, sz);
+//
+//	for (int i = 0; i < sz-1; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+
+
+
 #include<stdio.h>
-void Sad(int arr[], int sz)
-{
-	
-	for (int i = 0; i < sz-1; i++)
-	{
-		for (int j = 0; j < sz - i-1 ; j++)
-		{
-			if (arr[j] > arr[j + 1])
-			{
-				int tmp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = tmp;
-			}
-		}
-	}
-}
+#include<string.h>
+
 int main(void)
 {
-	int arr[] = { 0,8,9,5,6,7,1,3,2,4 };
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int arr1[] = { 10,9,8,7,6,5,4,3,2,1 };
+	int arr2[] = {0};
+	strcpy(arr, arr2);
+	strcpy(arr1, arr);
+	strcpy(arr2, arr1);
 	int sz = sizeof(arr) / sizeof(arr[0]);
-	Sad(arr, sz);
-
-	for (int i = 0; i < sz-1; i++)
+	for (int i = 0; i < sz; i++)
 	{
 		printf("%d ", arr[i]);
 	}
+
 	return 0;
 }
