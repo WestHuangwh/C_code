@@ -567,34 +567,116 @@
 //}
 
 
+////交换两个整形数组的值
+//#include<stdio.h>
+//#include<string.h>
+//
+//void Swap(int* x, int* y)
+//{
+//	int tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//}
+//int main(void)
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int arr1[] = { 10,9,8,7,6,5,4,3,2,1 };
+//	
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (int i = 0; i < sz; i++)
+//	{
+//		Swap(&arr[i], &arr1[i]);
+//	}
+//	for (int i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//	for (int i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr1[i]);
+//	}
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//void init(int* parr,int sz)//把整形数组初始化为零
+//{
+//	for (int i = 0; i < sz; i++)
+//	{
+//		*(parr + i) = 0;
+//	}
+//}
+//void print(int* parr, int sz)//打印整形数组
+//{
+//	for (int i = 0; i < sz; i++)
+//	{
+//		printf("%d ", *(parr + i));
+//	}
+//}
+//void reverse(int* parr, int sz)//完成数组元素的逆置
+//{
+//	int left = 0;
+//	int right = sz - 1;
+//	while (left < right)
+//	{
+//		int tmp = *(parr + left);
+//		*(parr + left) = *(parr + right);
+//		*(parr + right) = tmp;
+//		left++;
+//		right--;
+//	}
+//}
+//int main(void)
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);//计算出整形数组的元素个数
+//	//init(arr, sz);
+//	//print(arr, sz);
+//	reverse(arr, sz);
+//	print(arr, sz);
+//
+//	return 0;
+//}
+
 
 #include<stdio.h>
-#include<string.h>
 
-void Swap(int* x, int* y)
+void Init(int arr[], int sz, int set)
 {
-	int tmp = *x;
-	*x = *y;
-	*y = tmp;
-}
-int main(void)
-{
-	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int arr1[] = { 10,9,8,7,6,5,4,3,2,1 };
-	
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	for (int i = 0; i < sz; i++)
+	int i = 0;
+	for (i = 0; i < sz; i++)
 	{
-		Swap(&arr[i], &arr1[i]);
+		arr[i] = set;
 	}
-	for (int i = 0; i < sz; i++)
+}
+
+
+void Print(int arr[], int sz)
+{
+	int i = 0;
+	for (i = 0; i < sz; i++)
 	{
 		printf("%d ", arr[i]);
 	}
 	printf("\n");
-	for (int i = 0; i < sz; i++)
+}
+
+
+void Reverse(int arr[], int sz)
+{
+	int left = 0;
+	int right = sz - 1;
+
+
+	while (left < right)
 	{
-		printf("%d ", arr1[i]);
+		int tmp = arr[left];
+		arr[left] = arr[right];
+		arr[right] = tmp;
+		left++;
+		right--;
 	}
-	return 0;
 }
