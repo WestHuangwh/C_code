@@ -537,22 +537,29 @@
 
 
 #include<stdio.h>
-int mai(void)
+void Sad(int arr[], int sz)
 {
-	int arr[] = { 10,8,9,5,6,7,1,3,2,4 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	int left = 0;
-	while (left <= sz - 1)
+	
+	for (int i = 0; i < sz-1; i++)
 	{
-		if (arr[left] > arr[left + 1])
+		for (int j = 0; j < sz - i-1 ; j++)
 		{
-			int tmp = arr[left];
-			arr[left] = arr[left + 1];
-			arr[left + 1] = tmp;
-			left++;
+			if (arr[j] > arr[j + 1])
+			{
+				int tmp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tmp;
+			}
 		}
 	}
-	for (int i = 0; i < sz; i++)
+}
+int main(void)
+{
+	int arr[] = { 0,8,9,5,6,7,1,3,2,4 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	Sad(arr, sz);
+
+	for (int i = 0; i < sz-1; i++)
 	{
 		printf("%d ", arr[i]);
 	}
