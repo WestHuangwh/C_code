@@ -641,23 +641,21 @@
 //	return 0;
 //}
 
-#include <stdio.h> 
-void main() 
+
+#include<stdio.h>
+
+int main()
 {
-	int a, b;
-	unsigned c, d;
-	long e, f;
-	a = 100;
-	b = -100;
-	e = 50000;
-	f = 32767;
-	c = a;
-	d = b;
-	printf("%d,%d\n", a, b);
-	printf(" %u, %u\n ", a, b);
-	printf("%u,%u\n", c, b);
-	c = a = e;
-	d = b = f;
-	printf("%d,%d\n", a, b);
-	printf("%u,%u\n", c, b);
+	int arr[10] = { 3,3,3,3,3,3,3,3,3,3 };
+	int* p = arr;
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		*(p + i) = i;
+	}
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d ", *(p + i));
+	}
+	return 0;
 }
