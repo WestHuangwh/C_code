@@ -646,16 +646,7 @@
 
 int main()
 {
-	int arr[10] = { 3,3,3,3,3,3,3,3,3,3 };
-	int* p = arr;
-	int i = 0;
-	for (i = 0; i < 10; i++)
-	{
-		*(p + i) = i;
-	}
-	for (i = 0; i < 10; i++)
-	{
-		printf("%d ", *(p + i));
-	}
+	char arr[] = "Hello world";
+	printf(arr);
 	return 0;
 }
