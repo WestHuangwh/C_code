@@ -642,11 +642,52 @@
 //}
 
 
-#include<stdio.h>
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int x = 0;
+//	int y = 0;
+//	int count = 0;
+//	scanf("%d %d", &x, &y);
+//	
+//	int c = x ^ y;
+//	for(int i = 0; i < 32; i++)
+//	{
+//		if (c&1)
+//		{
+//			count++;
+//		}
+//		c >>= 1;
+//	}
+//	printf("%d", count);
+//	return 0;
+//}
 
+
+//#include<stdio.h>
+//int main(void)
+//{
+//	int n = 0;
+//	int count = 0;
+//	scanf("%d", &n);
+//	for (int i = 0; i < 32; i++)
+//	{
+//		if (n & 1)
+//		{
+//			count++;
+//		}
+//		n >>= 1;
+//	}
+//	printf("%d", count++);
+//	return 0;
+//}
+
+
+#include<stdio.h>
 int main()
 {
-	char arr[] = "Hello world";
+	char arr[10] = { 0 };
 	printf(arr);
 	return 0;
 }
