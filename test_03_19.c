@@ -684,10 +684,65 @@
 //}
 
 
+//#include<stdio.h>
+//int main()
+//{
+//	int money = 0;
+//	int n = 0;
+//	int nn = 0;
+//
+//
+//	scanf("%d", &money);
+//
+//	//·½·¨1
+//	n = money;
+//	nn = money;
+//	while (nn > 1)
+//	{
+//		n += nn / 2;
+//		nn = nn / 2 + nn % 2;
+//	}
+//	printf("%d", n);
+//
+//	return 0;
+//}
+
 #include<stdio.h>
+#include<string.h>
+
+void swap_arr(int arr[], int sz)
+{
+	int left = 0;
+	int right = sz - 1;
+	int tmp = 0;
+
+
+	while (left < right)
+	{
+		while ((left < right) && (arr[left] % 2 == 1))
+		{
+			left++;
+		}
+		while ((left < right) && (arr[right] % 2 == 0))
+		{
+			right--;
+		}
+		if (left < right)
+		{
+			tmp = arr[left];
+			arr[left] = arr[right];
+			arr[right] = tmp;
+		}
+	}
+}
 int main()
 {
-	char arr[10] = { 0 };
-	printf(arr);
+	int arr[20] = { 1,2,3,4,5,6,7,8,9,10 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	swap_arr(arr, sz);
+	for (int i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
 	return 0;
 }
