@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\黄武豪\OneDrive\桌面\test.c" />
     <ClCompile Include="test_01_01.c" />
     <ClCompile Include="test_01_15.c" />
     <ClCompile Include="test_01_25.c" />
