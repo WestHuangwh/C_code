@@ -42,7 +42,7 @@
     <ClCompile Include="test_04_01.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\黄武豪\OneDrive\桌面\Exam(1).c">
+    <ClCompile Include="Exam(1).c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
