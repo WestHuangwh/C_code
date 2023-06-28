@@ -34,13 +34,3 @@
 //}
 
 
-#include<stdio.h>
-int main()
-{
-	printf("Hello world");
-	int input = 0;
-	scanf("%d", &input);
-	printf("%d\n", input);
-
-	return 0;
-}
